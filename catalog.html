@@ -1,10 +1,147 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Каталог товаров</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Каталог товаров</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-nav">
+                <a class="main-header--logo" href="index.html">
+                    <!-- TODO: add width/height -->
+                    <img src="img/logo.svg" alt="Логотип Device">
+                </a>
+                <div class="user-nav">
+                    <input type="search" placeholder="Поиск по сайту">
+                    <p class="user-name">Валентин Петухов</p>
+                    <a class="login-link login-link--logout">Выйти</a>
+                    <a class="compare-link" href="#">Сравнить</a>
+                    <a class="cart-link">Корзина</a>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="catalog.html">Каталог товаров</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
 
-</body>
+        <main class="container">
+            <h1>Моноподы для селфи</h1>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#">Каталог товаров</a></li>
+                <li class="breadcrumbs--current">Моноподы для селфи</li>
+            </ul>
+
+            <section class="filter">
+                <h2 class="visually--hidden">Фильтр товаров</h2>
+                <!-- TODO: make fitlers after it's learnt -->
+            </section>
+
+            <section class="sorting">
+                <h2 class="visually--hidden">Сортировка товаров</h2>
+                <!-- TODO: make fitlers after it's learnt -->
+            </section>
+
+            <section class="catalog">
+                <h2 class="visually--hidden">Каталог товаров</h2>
+                <ul class="catalog-list">
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-item--title">Любительская селфи-палка</span>
+                            </a>
+                        </h3>
+                        <p class="catalog-item--image">
+                            <a href="#">
+                                <!-- TODO: add width/height -->
+                                <img src="img/product-1.jpeg" alt="Любительская селфи-палка">
+                            </a>
+                        </p>
+                        <p class="catalog-item--price">500 руб.</p>
+                    </li>
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-item--title">Профессиональная селфи-палка</span>
+                            </a>
+                        </h3>
+                        <p class="catalog-item--image">
+                            <a href="#">
+                                <!-- TODO: add width/height -->
+                                <img src="img/product-2.jpeg" alt="Профессиональная селфи-палка">
+                            </a>
+                        </p>
+                        <p class="catalog-item--price">1500 руб.</p>
+                    </li>
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-item--title">Непотопляемая селфи-палка</span>
+                            </a>
+                        </h3>
+                        <p class="catalog-item--image">
+                            <a href="#">
+                                <!-- TODO: add width/height -->
+                                <img src="img/product-3.jpeg" alt="Непотопляемая селфи-палка">
+                            </a>
+                        </p>
+                        <p class="catalog-item--price">2500 руб.</p>
+                    </li>
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-item--title">Селфи-палка «Следуй за мной»</span>
+                            </a>
+                        </h3>
+                        <p class="catalog-item--image">
+                            <a href="#">
+                                <!-- TODO: add width/height -->
+                                <img src="img/product-4.jpeg" alt="Селфи-палка 'Следуй за мной'">
+                            </a>
+                        </p>
+                        <p class="catalog-item--price">4900 руб.</p>
+                    </li>
+                </ul>
+                <ul class="pagination-list">
+                    <li class="pagination-item pagination-item--current"><a href="#">1</a></li>
+                    <li class="pagination-item"><a>2</a></li>
+                    <li class="pagination-item"><a href="#">3</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a class="main-footer--logo">
+                    <!-- TODO: add width/height -->
+                    <img src="img/logo-footer.svg" alt="Логотип Device">
+                </a>
+                <div class="user-nav">
+                    <p class="user-name">Валентин Петухов</p>
+                    <a class="login-link login-link--logout">Выйти</a>
+                    <a class="compare-link" href="#">Сравнить</a>
+                    <a class="cart-link">Корзина</a>
+                </div>
+                <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+                <ul class="menu-list">
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
+            </nav>
+            <ul class="footer-social">
+                <li><a class="btn-social" href="#">Facebook</a></li>
+                <li><a class="btn-social" href="#">Instagram</a></li>
+                <li><a class="btn-social" href="#">Twitter</a></li>
+            </ul>
+            <a class="footer-copyright" href="https://htmlacademy.ru">
+                <!-- TODO: add width/height -->
+                <img src="img/html-academy-logo.svg" alt="Логотип HTML Academy">
+            </a>
+        </footer>
+    </body>
 </html>
