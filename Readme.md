@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Ирина Ковальчук](https://up.htmlacademy.ru/htmlcss/25/user/673735).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Уразаев](https://htmlacademy.ru/profile/urazaev).
 
 ---
 

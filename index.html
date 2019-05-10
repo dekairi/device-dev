@@ -1,12 +1,167 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <title>Девайс</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-nav">
+                <a class="main-header--logo">
+                    <!-- TODO: add width/height -->
+                    <img src="img/logo.svg" alt="Логотип Device">
+                </a>
+                <div class="user-nav">
+                    <input type="search" placeholder="Поиск по сайту">
+                    <a class="login-link">Войти</a>
+                    <a class="compare-link" href="#">Сравнить</a>
+                    <a class="cart-link">Корзина</a>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="catalog.html">Каталог товаров</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+        <main class="container">
+            <h1 class="visually--hidden">Магазин девайсов</h1>
 
-  </body>
+            <section class="slider">
+                <!-- TODO: make slider when it's learnt -->
+            </section>
+
+            <section class="catalog-menu">
+                <h2 class="visually--hidden">Меню каталога</h2>
+                <ul class="catalog-menu-list">
+                    <li class="catalog-menu-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-menu-item--title">Виртуальная реальность</span>
+                            </a>
+                        </h3>
+                    </li>
+                    <li class="catalog-menu-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-menu-item--title">Моноподы для селфи</span>
+                            </a>
+                        </h3>
+                    </li>
+                    <li class="catalog-menu-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-menu-item--title">Экшн-камеры</span>
+                            </a>
+                        </h3>
+                    </li>
+                    <li class="catalog-menu-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-menu-item--title">Фитнес-браслеты</span>
+                            </a>
+                        </h3>
+                    </li>
+                    <li class="catalog-menu-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-menu-item--title">Умные часы</span>
+                            </a>
+                        </h3>
+                    </li>
+                    <li class="catalog-menu-item">
+                        <h3>
+                            <a href="#">
+                                <span class="catalog-menu-item--title">Квадрокоптеры</span>
+                            </a>
+                        </h3>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="information">
+                <ul class="info-menu-list">
+                    <li class="info-menu-item info-menu--current"><a class="btn" href="#">Доставка</a></li>
+                    <li class="info-menu-item"><a class="btn" href="#">Гарантия</a></li>
+                    <li class="info-menu-item"><a class="btn" href="#">Кредит</a></li>
+                </ul>
+                <h2>Доставка</h2>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            </section>
+
+            <section class="brands">
+                <h2 class="visually--hidden">Бренды</h2>
+                <ul class="brands-list">
+                    <li class="brand-item">
+                        <!-- TODO: add width/height -->
+                        <img src="img/dji.svg" alt="Логотип DJI">
+                    </li>
+                    <li class="brand-item">
+                        <!-- TODO: add width/height -->
+                        <img src="img/sp.svg" alt="Логотип SP Gadgets">
+                    </li>
+                    <li class="brand-item">
+                        <!-- TODO: add width/height -->
+                        <img src="img/gopro.svg" alt="Логотип GoPro">
+                    </li>
+                    <li class="brand-item">
+                        <!-- TODO: add width/height -->
+                        <img src="img/vive.svg" alt="Логотип VIVE">
+                    </li>
+                </ul>
+            </section>
+
+            <section class="about-us">
+                <h2>О нас</h2>
+                <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+                <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями</p>
+                <ul class="partners-list">
+                    <li class="partner-item">Деловые Линии</li>
+                    <li class="partner-item">Автотрейдинг</li>
+                    <li class="partner-item">ЖелДорЭкспедиция</li>
+                </ul>
+                <a class="btn" href="#">Подробнее о нас</a>
+            </section>
+
+            <section class="contacts">
+                <h2>Контакты</h2>
+                <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+                <!-- TODO: finish the map after JS (Yandex/Google) -->
+                <div id="map"></div>
+                <a class="btn" href="#">Напишите нам</a>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a class="main-footer--logo">
+                    <!-- TODO: add width/height -->
+                    <img src="img/logo-footer.svg" alt="Логотип Device">
+                </a>
+                <div class="user-nav">
+                    <a class="login-link">Войти</a>
+                    <a class="compare-link" href="#">Сравнить</a>
+                    <a class="cart-link">Корзина</a>
+                </div>
+                <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+                <ul class="menu-list">
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
+            </nav>
+            <ul class="footer-social">
+                <li><a class="btn-social" href="#">Facebook</a></li>
+                <li><a class="btn-social" href="#">Instagram</a></li>
+                <li><a class="btn-social" href="#">Twitter</a></li>
+            </ul>
+            <a class="footer-copyright" href="https://htmlacademy.ru">
+                <!-- TODO: add width/height -->
+                <img src="img/html-academy-logo.svg" alt="Логотип HTML Academy">
+            </a>
+        </footer>
+    </body>
 </html>
