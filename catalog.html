@@ -36,13 +36,63 @@
             </ul>
 
             <section class="filter">
-                <h2 class="visually--hidden">Фильтр товаров</h2>
-                <!-- TODO: make fitlers after it's learnt -->
+                <h2>Фильтр:</h2>
+                <form action="#" method="post">
+                    <label for="price">Стоимость</label>
+                    <div id="price">
+                        <label for="price-min">от <span>0</span></label>
+                        <input id="price-min" type="range" min="0" max="8000" value="0">
+
+                        <label for="price-max">до <span>5000</span></label>
+                        <input id="price-max" type="range" min="0" max="8000" value="5000">
+                    </div>
+
+                    <label for="color">Цвет</label>
+                    <div id="color">
+                        <label for="black">Черный</label>
+                        <input id="black" name="black" type="checkbox" checked>
+
+                        <label for="white">Белый</label>
+                        <input id="white" name="white" type="checkbox">
+
+                        <label for="blue">Синий</label>
+                        <input id="blue" name="blue" type="checkbox" checked>
+
+                        <label for="red">Красный</label>
+                        <input id="red" name="red" type="checkbox" checked>
+
+                        <label for="pink">Розовый</label>
+                        <input id="pink" name="pink" type="checkbox">
+                    </div>
+
+                    <label for="bluetooth">Bluetooth</label>
+                    <div id="bluetooth">
+                        <label for="bluetooth-yes">Есть</label>
+                        <input id="bluetooth-yes" type="radio" name="yes" value="1" checked>
+
+                        <label for="bluetooth-no">Нет</label>
+                        <input id="bluetooth-no" type="radio" name="no" value="0">
+                    </div>
+
+                    <input type="submit" value="Применить">
+                </form>
             </section>
 
             <section class="sorting">
-                <h2 class="visually--hidden">Сортировка товаров</h2>
-                <!-- TODO: make fitlers after it's learnt -->
+                <h2>Сортировка:</h2>
+                <div class="sort">
+                    <label for="sort-by-price">По цене</label>
+                    <input id="sort-by-price" name="sort-by-price" type="radio" checked>
+
+                    <label for="sort-by-type">По типу</label>
+                    <input id="sort-by-type" name="sort-by-type" type="radio">
+
+                    <label for="sort-by-popularity">По популярности</label>
+                    <input id="sort-by-popularity" name="sort-by-popularity" type="radio">
+
+                    <input id="sort-from-low" name="sort-from-low" type="radio">
+                    <input id="sort-from-high" name="sort-from-high" type="radio" checked>
+                </div>
             </section>
 
             <section class="catalog">
@@ -84,7 +134,7 @@
                         </p>
                         <p class="catalog-item--price">2500 руб.</p>
                     </li>
-                    <li class="catalog-item">
+                    <li class="catalog-item catalog-item--new">
                         <h3>
                             <a href="#">Селфи-палка «Следуй за мной»</a>
                         </h3>
