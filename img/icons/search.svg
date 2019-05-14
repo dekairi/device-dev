@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Index" transform="translate(-203.000000, -91.000000)" fill="#000000">
+            <g id="header-main" transform="translate(140.000000, 22.000000)">
+                <g id="search" transform="translate(63.000000, 69.000000)">
+                    <g id="Shape">
+                        <path d="M15.7,14.3 L12.596,11.196 C13.5067231,9.98663743 13.9994986,8.51392672 14,7 C14,3.13400675 10.8659932,2.36723813e-16 7,0 C3.13400675,-2.36723813e-16 3.58207209e-15,3.13400675 3.10862447e-15,7 C2.63517684e-15,10.8659932 3.13400675,14 7,14 C8.51308959,14.0000094 9.9850056,13.5071474 11.193,12.596 L14.3,15.7 C14.485,15.884 14.68,16 15,16 C15.5522847,16 16,15.5522847 16,15 C16.0045025,14.7345414 15.8953338,14.4798145 15.7,14.3 L15.7,14.3 Z M2,7 C2,4.238 4.238,2 7,2 C9.762,2 12,4.238 12,7 C12,9.762 9.762,12 7,12 C4.238,12 2,9.762 2,7 Z" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

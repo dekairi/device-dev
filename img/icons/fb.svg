@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>fb</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+        <g id="Index" transform="translate(-649.000000, -2696.000000)" fill="#FFFFFF">
+            <g id="footer" transform="translate(0.000000, 2472.000000)">
+                <g id="fb" transform="translate(649.000000, 224.000000)">
+                    <g id="Shape">
+                        <path d="M16,0 C7.164,0 0,7.163 0,16 C0,24.837 7.164,32 16,32 C24.837,32 32,24.836 32,16 C32,7.164 24.837,0 16,0 Z M20.062,9.455 L17.041,9.455 L17.041,12.899 L20.062,12.899 L20.062,16.344 L17.041,16.344 L17.041,24.954 L14.02,24.954 L14.02,16.344 L11,16.344 L11,12.899 L14.021,12.899 L14.021,9.455 C14.021,7.553 15.374,6.01 17.042,6.01 L20.063,6.01 L20.063,9.455 L20.062,9.455 Z" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
