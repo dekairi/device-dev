@@ -36,7 +36,7 @@
 
             <section class="filter">
                 <h2>Фильтр:</h2>
-                <form action="#" method="post">
+                <form action="http://echo.htmlacademy.ru" method="post">
                     <label for="price">Стоимость</label>
                     <div id="price">
                         <label for="price-min">от 0</label>
@@ -46,8 +46,8 @@
                         <button id="price-max"></button>
                     </div>
 
-                    <label for="color">Цвет</label>
-                    <div id="color">
+                    <h3>Цвет</h3>
+                    <div>
                         <label for="black">Черный</label>
                         <input id="black" name="black" type="checkbox" checked>
 
@@ -64,8 +64,8 @@
                         <input id="pink" name="pink" type="checkbox">
                     </div>
 
-                    <label for="bluetooth">Bluetooth</label>
-                    <div id="bluetooth">
+                    <h3>Bluetooth</h3>
+                    <div>
                         <label for="bluetooth-yes">Есть</label>
                         <input id="bluetooth-yes" type="radio" name="yes" value="1" checked>
 
@@ -73,26 +73,21 @@
                         <input id="bluetooth-no" type="radio" name="no" value="0">
                     </div>
 
-                    <input type="submit" value="Применить">
+                    <button type="submit" value="Применить"></button>
                 </form>
             </section>
 
             <section class="catalog">
                 <h2 class="visually--hidden">Каталог товаров</h2>
 
-                <div class="sort">
-                    <label for="sort-by-price">По цене</label>
-                    <input id="sort-by-price" name="sort-by-price" type="radio" checked>
-
-                    <label for="sort-by-type">По типу</label>
-                    <input id="sort-by-type" name="sort-by-type" type="radio">
-
-                    <label for="sort-by-popularity">По популярности</label>
-                    <input id="sort-by-popularity" name="sort-by-popularity" type="radio">
-
-                    <input id="sort-from-low" name="sort-from-low" type="radio">
-                    <input id="sort-from-high" name="sort-from-high" type="radio" checked>
-                </div>
+                <ul class="sort-list">
+                    <li><a class="price" href="#">По цене</a></li>
+                    <li><a class="type" href="#">По типу</a></li>
+                    <li><a class="popularity" href="#">По популярности</a></li>
+                    
+                    <li><a class="sort-from-low" href="#"></a></li>
+                    <li><a class="sort-from-high" href="#"></a></li>
+                </ul>
 
                 <ul class="catalog-list">
                     <li class="catalog-item">
