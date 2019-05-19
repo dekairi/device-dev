@@ -50,41 +50,55 @@
             <section class="filter">
                 <h2>Фильтр:</h2>
                 <form action="http://echo.htmlacademy.ru" method="post">
-                    <label for="price">Стоимость</label>
-                    <div id="price">
-                        <label for="price-min">от 0</label>
-                        <button id="price-min"></button>
+                    <fieldset class="price">
+                        <legend>Стоимость</legend>
+                        <div>
+                            <label for="price-min">от 0</label>
+                            <button id="price-min"></button>
 
-                        <label for="price-max">до 5000</label>
-                        <button id="price-max"></button>
-                    </div>
+                            <label for="price-max">до 5000</label>
+                            <button id="price-max"></button>
+                        </div>
+                    </fieldset>
 
-                    <h3>Цвет</h3>
-                    <div>
-                        <label for="black">Черный</label>
-                        <input id="black" name="black" type="checkbox" checked>
+                    <fieldset class="color">
+                        <legend>Цвет</legend>
 
-                        <label for="white">Белый</label>
-                        <input id="white" name="white" type="checkbox">
+                        <ul>
+                            <li>
+                                <label for="black">Черный</label>
+                                <input id="black" name="black" type="checkbox" checked>
+                            </li>
+                            <li>
+                                <label for="white">Белый</label>
+                                <input id="white" name="white" type="checkbox">
+                            </li>
+                            <li>
+                                <label for="blue">Синий</label>
+                                <input id="blue" name="blue" type="checkbox" checked>
+                            </li>
+                            <li>
+                                <label for="red">Красный</label>
+                                <input id="red" name="red" type="checkbox" checked>
+                            </li>
+                            <li>
+                                <label for="pink">Розовый</label>
+                                <input id="pink" name="pink" type="checkbox">
+                            </li>
+                        </ul>
+                    </fieldset>
 
-                        <label for="blue">Синий</label>
-                        <input id="blue" name="blue" type="checkbox" checked>
+                    <fieldset class="bluetooth">
+                        <legend>Bluetooth</legend>
 
-                        <label for="red">Красный</label>
-                        <input id="red" name="red" type="checkbox" checked>
+                        <div>
+                            <label for="bluetooth-yes">Есть</label>
+                            <input id="bluetooth-yes" type="radio" name="bluetooth" value="1" checked>
 
-                        <label for="pink">Розовый</label>
-                        <input id="pink" name="pink" type="checkbox">
-                    </div>
-
-                    <h3>Bluetooth</h3>
-                    <div>
-                        <label for="bluetooth-yes">Есть</label>
-                        <input id="bluetooth-yes" type="radio" name="bluetooth" value="1" checked>
-
-                        <label for="bluetooth-no">Нет</label>
-                        <input id="bluetooth-no" type="radio" name="bluetooth" value="0">
-                    </div>
+                            <label for="bluetooth-no">Нет</label>
+                            <input id="bluetooth-no" type="radio" name="bluetooth" value="0">
+                        </div>
+                    </fieldset>
 
                     <button type="submit" value="Применить"></button>
                 </form>
