@@ -11,13 +11,26 @@
                     <img src="img/icons/logo.svg" width="164" height="36" alt="Логотип Device">
                 </a>
                 <div class="user-nav">
-                    <input type="search" placeholder="Поиск по сайту">
-                    <a class="login-link">Войти</a>
+                    <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                    <a class="login-link" href="#">Войти</a>
                     <a class="compare-link" href="#">Сравнить</a>
                     <a class="cart-link" href="#">Корзина</a>
                 </div>
                 <ul class="menu-list">
-                    <li><a href="catalog.html">Каталог товаров</a></li>
+                    <li>
+                        <a href="catalog.html">Каталог товаров</a>
+                        <section class="catalog">
+                            <h2 class="visually--hidden">Каталог товаров</h2>
+                            <ul class="catalog-list">
+                                <li><a href="#">Виртуальная реальность</a></li>
+                                <li><a href="catalog.html">Моноподы для селфи</a></li>
+                                <li><a href="#">Экшн-камеры</a></li>
+                                <li><a href="#">Фитнес-браслеты</a></li>
+                                <li><a href="#">Умные часы</a></li>
+                                <li><a href="#">Квадрокоптеры</a></li>
+                            </ul>
+                        </section>
+                    </li>
                     <li><a href="#">Доставка</a></li>
                     <li><a href="#">Гарантия</a></li>
                     <li><a href="#">Контакты</a></li>
@@ -84,7 +97,7 @@
                 </div>
 
                 <ul class="slider-dots-list">
-                    <li><button type="button" class="slider-dot-item slider-dot-item--current"></button></li>
+                    <li><button type="button" class="slider-dot-item--current"></button></li>
                     <li><button type="button" class="slider-dot-item"></button></li>
                     <li><button type="button" class="slider-dot-item"></button></li>
                 </ul>
@@ -169,8 +182,7 @@
             <section class="contacts">
                 <h2>Контакты</h2>
                 <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                <!-- TODO: finish the map after JS (Yandex/Google) -->
-                <div id="map"></div>
+                <img src="img/content/map.png" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15" width="560" height="222">
                 <a class="btn" href="#">Напишите нам</a>
             </section>
         </main>
@@ -202,5 +214,31 @@
                 <img src="img/icons/logo-html.svg" alt="Логотип HTML Academy" width="27" height="35">
             </a>
         </footer>
+
+        <section class="modal modal-feedback">
+            <h2 class="visually--hidden">Обратная связь</h2>
+            <form action="http://echo.htmlacademy.ru" method="post">
+                <label for="full-name">Ваше имя:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Имя Фамилия" required>
+
+                <label for="email">Ваше e-mail:</label>
+                <input type="email" id="email" name=email placeholder="email@example.com" required>
+
+                <label for="feedback-text">Текст письма:</label>
+                <textarea id="feedback-text" name="feedback-text" placeholder="В свободной форме" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+
+            <button class="close-btn" type="button"></button>
+        </section>
+
+        <section class="modal modal-map">
+            <h2 class="visually--hidden">Карта проезда</h2>
+            <!-- TODO: finish the map after JS (Yandex/Google) -->
+            <div id="map"></div>
+            <img src="img/content/map-big.png" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15" width="960" height="559">
+            <button class="close-btn" type="button"></button>
+        </section>
     </body>
 </html>
