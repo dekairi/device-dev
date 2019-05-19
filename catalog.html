@@ -8,15 +8,15 @@
         <header class="main-header">
             <nav class="main-nav">
                 <a class="main-header--logo" href="index.html">
-                    <img src="img/icons/logo.svg" alt="Логотип Device" width="164" height="36">
+                    <img src="img/icons/logo.svg" alt="Логотип магазин Device" width="164" height="36">
                 </a>
-                <div class="user-nav">
-                    <input type="search" placeholder="Поиск по сайту">
-                    <p class="user-name">Валентин Петухов</p>
-                    <a class="login-link login-link--logout">Выйти</a>
-                    <a class="compare-link" href="#">Сравнить</a>
-                    <a class="cart-link">Корзина</a>
-                </div>
+                <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                <ul class="user-nav">
+                    <li><a class="user-name" href="#">Валентин Петухов</a></li>
+                    <li><a class="login-link login-link--logout" href="#">Выйти</a></li>
+                    <li><a class="compare-link" href="#">Сравнить</a></li>
+                    <li><a class="cart-link" href="#">Корзина</a></li>
+                </ul>
                 <ul class="menu-list">
                     <li>
                         <a href="#">Каталог товаров</a>
@@ -24,7 +24,7 @@
                             <h2 class="visually--hidden">Каталог товаров</h2>
                             <ul class="catalog-list">
                                 <li><a href="#">Виртуальная реальность</a></li>
-                                <li><a href="catalog.html">Моноподы для селфи</a></li>
+                                <li><a>Моноподы для селфи</a></li>
                                 <li><a href="#">Экшн-камеры</a></li>
                                 <li><a href="#">Фитнес-браслеты</a></li>
                                 <li><a href="#">Умные часы</a></li>
@@ -80,10 +80,10 @@
                     <h3>Bluetooth</h3>
                     <div>
                         <label for="bluetooth-yes">Есть</label>
-                        <input id="bluetooth-yes" type="radio" name="yes" value="1" checked>
+                        <input id="bluetooth-yes" type="radio" name="bluetooth" value="1" checked>
 
                         <label for="bluetooth-no">Нет</label>
-                        <input id="bluetooth-no" type="radio" name="no" value="0">
+                        <input id="bluetooth-no" type="radio" name="bluetooth" value="0">
                     </div>
 
                     <button type="submit" value="Применить"></button>
@@ -94,12 +94,12 @@
                 <h2 class="visually--hidden">Каталог товаров</h2>
 
                 <ul class="sort-list">
-                    <li><a class="price" href="#">По цене</a></li>
-                    <li><a class="type" href="#">По типу</a></li>
-                    <li><a class="popularity" href="#">По популярности</a></li>
+                    <li><a href="#">По цене</a></li>
+                    <li><a href="#">По типу</a></li>
+                    <li><a href="#">По популярности</a></li>
                     
-                    <li><a class="sort-from-low" href="#"></a></li>
-                    <li><a class="sort-from-high" href="#"></a></li>
+                    <li><a class="sort-low" href="#">По возрастанию</a></li>
+                    <li><a class="sort-high" href="#">По убыванию</a></li>
                 </ul>
 
                 <ul class="catalog-list">
@@ -149,9 +149,9 @@
                     </li>
                 </ul>
                 <ul class="pagination-list">
-                    <li class="pagination-item pagination-item--current">1</li>
-                    <li class="pagination-item"><a href="#">2</a></li>
-                    <li class="pagination-item"><a href="#">3</a></li>
+                    <li class="pagination-item--current">1</li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
                 </ul>
             </section>
         </main>
@@ -162,10 +162,10 @@
                     <img src="img/icons/logo-yellow.svg" alt="Логотип Device" width="164" height="36">
                 </a>
                 <div class="user-nav">
-                    <p class="user-name">Валентин Петухов</p>
-                    <a class="login-link login-link--logout">Выйти</a>
+                    <a class="user-name" href="#">Валентин Петухов</a>
+                    <a class="login-link login-link--logout" href="#">Выйти</a>
                     <a class="compare-link" href="#">Сравнить</a>
-                    <a class="cart-link">Корзина</a>
+                    <a class="cart-link" href="#">Корзина</a>
                 </div>
                 <p class="footer-address">г. Москва, ул. Строителей, 15</p>
                 <ul class="menu-list">
