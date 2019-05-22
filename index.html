@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Магазин гаджетов - Девайс</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
@@ -106,22 +108,22 @@
             <section class="catalog-menu">
                 <h2 class="visually--hidden">Меню каталога</h2>
                 <ul class="catalog-menu-list">
-                    <li>
+                    <li class="catalog-item-vr">
                         <h3><a href="#">Виртуальная реальность</a></h3>
                     </li>
-                    <li>
+                    <li class="catalog-item-monopods">
                         <h3><a href="catalog.html">Моноподы для селфи</a></h3>
                     </li>
-                    <li>
+                    <li class="catalog-item-action-cameras">
                         <h3><a href="#">Экшн-камеры</a></h3>
                     </li>
-                    <li>
+                    <li class="catalog-item-fit-bracelet">
                         <h3><a href="#">Фитнес-браслеты</a></h3>
                     </li>
-                    <li>
+                    <li class="catalog-item-smart-watch">
                         <h3><a href="#">Умные часы</a></h3>
                     </li>
-                    <li>
+                    <li class="catalog-item-copters">
                         <h3><a href="#">Квадрокоптеры</a></h3>
                     </li>
                 </ul>
@@ -134,15 +136,15 @@
                     <li><a class="btn" href="#">Кредит</a></li>
                 </ul>
                 <ul class="info-list">
-                    <li class="info--current">
+                    <li class="info--delivery info--current">
                         <h2>Доставка</h2>
                         <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                     </li>
-                    <li>
+                    <li class="info--guarantee">
                         <h2>Гарантия</h2>
                         <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                     </li>
-                    <li>
+                    <li class="info--credit">
                         <h2>Кредит</h2>
                         <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные  условия кредита. Выгодные для нашего банка, разумеется.</p>
                     </li>
@@ -153,16 +155,16 @@
                 <h2 class="visually--hidden">Бренды</h2>
                 <ul class="brands-list">
                     <li class="brand-item">
-                        <img src="img/icons/logo-1.svg" alt="Логотип DJI" width="260" height="100">
+                        <img src="img/icons/logo-dji.svg" alt="Логотип DJI" width="260" height="100">
                     </li>
                     <li class="brand-item">
-                        <img src="img/icons/logo-2.svg" alt="Логотип SP Gadgets" width="260" height="100">
+                        <img src="img/icons/logo-spgadgets.svg" alt="Логотип SP Gadgets" width="260" height="100">
                     </li>
                     <li class="brand-item">
-                        <img src="img/icons/logo-3.svg" alt="Логотип GoPro" width="260" height="100">
+                        <img src="img/icons/logo-gopro.svg" alt="Логотип GoPro" width="260" height="100">
                     </li>
                     <li class="brand-item">
-                        <img src="img/icons/logo-4.svg" alt="Логотип VIVE" width="260" height="100">
+                        <img src="img/icons/logo-vive.svg" alt="Логотип VIVE" width="260" height="100">
                     </li>
                 </ul>
             </section>
@@ -192,11 +194,11 @@
                 <a class="main-footer--logo">
                     <img src="img/icons/logo-yellow.svg" alt="Логотип Device" width="164" height="36">
                 </a>
-                <div class="user-nav">
-                    <a class="login-link" href="#">Войти</a>
-                    <a class="compare-link" href="#">Сравнить</a>
-                    <a class="cart-link" href="#">Корзина</a>
-                </div>
+                <ul class="user-nav">
+                    <li></il><a class="login-link" href="#">Войти</a></li>
+                    <li><a class="compare-link" href="#">Сравнить</a></li>
+                    <li><a class="cart-link" href="#">Корзина</a></li>
+                </ul>
                 <p class="footer-address">г. Москва, ул. Строителей, 15</p>
                 <ul class="menu-list">
                     <li><a href="#">Доставка</a></li>
@@ -205,10 +207,10 @@
                 </ul>
                 <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
             </nav>
-            <ul class="footer-social">
-                <li><a class="btn-social" href="#">Facebook</a></li>
-                <li><a class="btn-social" href="#">Instagram</a></li>
-                <li><a class="btn-social" href="#">Twitter</a></li>
+            <ul class="footer-social-list">
+                <li><a class="btn-social btn-social-fb" href="#">Facebook</a></li>
+                <li><a class="btn-social btn-social-ig" href="#">Instagram</a></li>
+                <li><a class="btn-social btn-social-tw" href="#">Twitter</a></li>
             </ul>
             <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
                 <img src="img/icons/logo-html.svg" alt="Логотип HTML Academy" width="27" height="35">
