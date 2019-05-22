@@ -50,7 +50,7 @@ a {
 }
 
 .main-nav {
-    background-color: #F0C52E;
+    background-color: rgba(240, 197, 46, 0.5);
     color: #000000;
 }
 
@@ -124,9 +124,53 @@ a {
     display: none;
 }
 
-/* TODO: bonus */
-.slider {
+
+.slider .slide-number {
+    font-size: 180px;
+    line-height: 180px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(240, 197, 46, 0.5);
+    margin: 0;
+}
+
+.slider b {
+    font-size: 47px;
+    line-height: 56px;
+    font-weight: 800;
+}
+
+.slider .slide-description {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.slider .parameter {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.slider .value {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.slide-2, .slide-3 {
     display: none;
+}
+
+.slider-dots-list {
+    list-style: none;
+}
+
+.slider-dots-list button {
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
 }
 
 .catalog-menu-list a {
@@ -342,9 +386,48 @@ a {
     color: rgba(0, 0, 0, 0.1);
 }
 
-/* TODO: bonus */
-.filter {
-    display: none;
+.filter fieldset {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.filter h2 {
+    background-color: rgba(220, 220, 220, 1);
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.filter legend {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.price label {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.price button {
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+}
+
+.color label,
+.bluetooth label {
+    font-family: "Open Sans", Arial, sans-serif;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 39px;
+}
+
+.color ul {
+    list-style: none;
 }
 
 .sort {
