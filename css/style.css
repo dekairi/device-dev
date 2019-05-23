@@ -546,7 +546,6 @@ a {
 a.btn-back,
 a.btn-next {
     color: rgba(0, 0, 0, 1);
-    letter-spacing: 3px;
     letter-spacing: 3.2px;
 }
 
