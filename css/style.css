@@ -68,6 +68,7 @@ a {
     font-weight: 300;
     font-size: 15px;
     line-height: 30px;
+    letter-spacing: 0.2px;
 }
 
 .user-nav input::placeholder {
@@ -82,16 +83,16 @@ a {
     color: rgba(0, 0, 0, 1);
 }
 
-.user-nav a {
+.main-header a:not(.main-header--logo) {
     color: rgba(0, 0, 0, 1);
 }
 
-.user-nav a:hover,
-.user-nav a:focus {
+.main-header a:hover:not(.main-header--logo),
+.main-header a:focus:not(.main-header--logo) {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.user-nav a:active {
+.main-header a:focus:not(.main-header--logo) {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -108,7 +109,7 @@ a {
     line-height: 24px;
     color: rgba(0, 0, 0, 1);
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 3.6px;
 }
 
 .menu-list a:hover,
@@ -131,12 +132,14 @@ a {
     color: rgba(255, 255, 255, 1);
     background-color: rgba(240, 197, 46, 0.5);
     margin: 0;
+    letter-spacing: 1.8px;
 }
 
 .slider b {
     font-size: 47px;
     line-height: 56px;
     font-weight: 800;
+    letter-spacing: 0.5px;
 }
 
 .slider .slide-description {
@@ -144,6 +147,7 @@ a {
     font-weight: 300;
     font-size: 15px;
     line-height: 30px;
+    letter-spacing: 0.2px;
 }
 
 .slider .parameter {
@@ -151,12 +155,14 @@ a {
     font-weight: 300;
     font-size: 13px;
     line-height: 20px;
+    letter-spacing: 0.1px;
 }
 
 .slider .value {
     font-weight: 300;
     font-size: 36px;
     line-height: 48px;
+    letter-spacing: 0.4px;
 }
 
 .slide-2, .slide-3 {
@@ -178,18 +184,23 @@ a {
     font-size: 18px;
     line-height: 24px;
     color: rgba(0, 0, 0, 1);
+    letter-spacing: 0.2px;
 }
 
-.catalog-menu-list li {
+.catalog-menu-list li::before {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 160px;
     background-color: rgba(240, 197, 46, 0.5);
 }
 
-.catalog-menu-list li:hover,
-.catalog-menu-list li:focus {
+.catalog-menu-list li:hover::before,
+.catalog-menu-list li:focus::before {
     background-color: rgba(240, 197, 46, 1);
 }
 
-.catalog-menu-list li:active {
+.catalog-menu-list li:active::before {
     background-color: rgba(240, 197, 46, 1);
 }
 
@@ -207,7 +218,13 @@ a {
 
 .btn {
     color: rgba(0, 0, 0, 1);
-    letter-spacing: 3px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    border: none;
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .btn:active,
@@ -237,6 +254,7 @@ a {
 .info-list h2 {
     font-size: 47px;
     line-height: 48px;
+    letter-spacing: 0.5px;
 }
 
 .info-list p {
@@ -245,6 +263,7 @@ a {
     font-size: 15px;
     line-height: 30px;
     color: rgba(70, 70, 70, 1);
+    letter-spacing: 0.2px;
 }
 
 .brands .brands-list {
@@ -265,6 +284,7 @@ a {
 .contacts h2 {
     font-size: 47px;
     line-height: 48px;
+    letter-spacing: 0.5px;
 }
 
 .about-us p,
@@ -274,12 +294,14 @@ a {
     font-size: 15px;
     line-height: 30px;
     color: rgba(70, 70, 70, 1);
+    letter-spacing: normal;
 }
 
 .partners-list {
     list-style: none;
     font-size: 16px;
     line-height: 40px;
+    letter-spacing: normal;
 }
 
 .main-footer {
@@ -306,6 +328,7 @@ a {
     font-size: 15px;
     line-height: 30px;
     color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.2px;
 }
 
 .user-nav a:hover,
@@ -324,7 +347,7 @@ a {
 .menu-list a {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
-    letter-spacing: 4px;
+    letter-spacing: 3.6px;
 }
 
 .menu-list a:hover,
@@ -375,6 +398,7 @@ a {
     font-size: 14px;
     line-height: 24px;
     color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.1px;
 }
 
 .breadcrumbs a:hover:not(.breadcrumbs--current),
@@ -397,17 +421,20 @@ a {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 24px;
+    letter-spacing: 3.2px;
 }
 
 .filter legend {
     font-size: 18px;
     line-height: 24px;
+    letter-spacing: 0.2px;
 }
 
 .price label {
     color: rgba(0, 0, 0, 0.2);
     font-weight: 300;
     font-size: 14px;
+    letter-spacing: normal;
     line-height: 24px;
 }
 
@@ -424,6 +451,7 @@ a {
     font-weight: 300;
     font-size: 14px;
     line-height: 39px;
+    letter-spacing: 0.1px;
 }
 
 .color ul {
@@ -439,7 +467,7 @@ a {
     font-size: 16px;
     line-height: 24px;
     color: rgba(0, 0, 0, 1);
-    letter-spacing: 3px;
+    letter-spacing: 3.2px;
     text-transform: uppercase;
 }
 
@@ -453,6 +481,7 @@ a {
     font-size: 14px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
+    letter-spacing: normal;
 }
 
 .sort-list .sort--current {
@@ -472,6 +501,7 @@ a {
     font-size: 18px;
     line-height: 24px;
     color: rgba(0, 0, 0, 1);
+    letter-spacing: 0.2px;
 }
 
 .catalog-item img:hover,
@@ -484,6 +514,7 @@ a {
     font-size: 16px;
     line-height: 24px;
     color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.2px;
 }
 
 .pagination-list {
@@ -496,6 +527,7 @@ a {
     font-size: 16px;
     line-height: 24px;
     color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 3.2px;
 }
 
 .pagination-list a:hover:not(.button),
@@ -515,6 +547,7 @@ a.btn-back,
 a.btn-next {
     color: rgba(0, 0, 0, 1);
     letter-spacing: 3px;
+    letter-spacing: 3.2px;
 }
 
 a.btn-back:hover,
