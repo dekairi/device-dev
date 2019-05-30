@@ -84,6 +84,10 @@ a {
     padding: 0 60px;
 }
 
+.user-nav--logout a:last-child {
+    width: 85px;
+}
+
 .user-nav {
     margin: 20px 0 0 0;
 }
@@ -128,9 +132,33 @@ a {
     padding-right: 5px;
 }
 
+.user-nav .login-search {
+    margin-right: 40px;
+}
+
+.user-nav a.user-name {
+    width: 160px;
+}
+
+.user-nav .login-link--logout {
+    margin-right: 80px;
+    width: 45px;
+    opacity: 0.3;
+}
+
 .user-nav input {
     background-color: transparent;
     border: none;
+    position: relative;
+}
+
+.user-nav input::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/search.svg");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 .user-nav input::placeholder {
@@ -156,6 +184,10 @@ a {
 
 .main-header a:focus:not(.main-header--logo) {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-list.user-nav--logout {
+    padding-bottom: 40px;
 }
 
 .menu-list,
@@ -396,6 +428,7 @@ a {
 
 .btn {
     color: rgba(0, 0, 0, 1);
+    background-color: transparent;
     letter-spacing: 3.6px;
     text-transform: uppercase;
     border: none;
@@ -409,6 +442,9 @@ a {
 .info-menu--current {
     color: rgba(247, 225, 132, 1);
     background-color: rgba(0, 0, 0, 1);
+}
+
+.info-menu--current {
     padding: 10px 137px 10px 20px;
 }
 
@@ -702,10 +738,35 @@ a {
     display: none;
 }
 
-.container h1 {
+.container--wrap {
+    padding: 45px 60px 0 60px;
+    margin: 0 auto 50px auto;
+    width: 1000px;
+}
+
+.container--wrap h1,
+.container--wrap .breadcrumbs {
+    margin: 0;
+    padding: 0;
+}
+
+.container--wrap h1 {
     font-size: 47px;
     line-height: 48px;
     letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.container--wrap .breadcrumbs {
+    display: flex;
+}
+
+.breadcrumbs li:first-child {
+    margin-right: 40px;
+}
+
+.breadcrumbs li:nth-child(2) {
+    margin-right: 30px;
 }
 
 .breadcrumbs {
@@ -730,24 +791,101 @@ a {
     color: rgba(0, 0, 0, 0.1);
 }
 
-.filter fieldset {
-    border: none;
+.catalog--wrap {
+    width: 100%;
+    display: flex;
+}
+
+.filter-column--wrap,
+.catalog-column--wrap {
+    position: relative;
+}
+
+.filter-column--wrap {
+    background-color: rgba(0, 0, 0, 0.08);
+    flex-grow: 1;
+}
+
+.filter-column--wrap::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 64px;
     background-color: rgba(0, 0, 0, 0.08);
 }
 
+.catalog-column--wrap {
+    flex-grow: 1;
+}
+
+.catalog-column--wrap::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.filter-width--wrap {
+    box-sizing: border-box;
+    width: 330px;
+    padding-left: 30px;
+    margin-left: auto;
+}
+
+.catalog-width--wrap {
+    width: 850px;
+    margin-right: auto;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    position: relative;
+}
+
+.filter form {
+    padding: 70px 70px 0 0;
+}
+
+.filter-title--wrap {
+    width: 100%;
+    height: 64px;
+}
+
+.filter fieldset {
+    border: none;
+}
+
 .filter h2 {
-    background-color: rgba(220, 220, 220, 1);
+    float: right;
     color: #000000;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 3.2px;
+    width: 200px;
+    margin: 0;
+    padding: 20px 40px 20px 0;
 }
 
 .filter legend {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.2px;
+}
+
+.filter fieldset.price {
+    border-top: 2px solid rgba(0, 0, 0, 1);
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    margin-bottom: 15px;
 }
 
 .price label {
@@ -774,13 +912,32 @@ a {
     letter-spacing: 0.1px;
 }
 
+.filter fieldset.color {
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
 .color ul {
     list-style: none;
 }
 
+.bluetooth ul {
+    list-style: none;
+}
+
+.sort--wrap {
+    width: 100%;
+    height: 64px;
+}
+
 .sort {
     border: none;
-    background-color: rgba(0, 0, 0, 0.08);
+    margin: 0;
+    padding: 20px 20px 20px 70px;
+    display: flex;
+    width: 760px;
+    position: relative;
+    float: left;
 }
 
 .sort legend {
@@ -789,10 +946,14 @@ a {
     color: rgba(0, 0, 0, 1);
     letter-spacing: 3.2px;
     text-transform: uppercase;
+    position: absolute;
 }
 
 .sort-list {
     list-style: none;
+    margin: 0 0 0 200px;
+    padding: 0;
+    display: flex;
 }
 
 .sort-list a {
@@ -802,6 +963,21 @@ a {
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
     letter-spacing: normal;
+}
+
+.sort-list li:first-child {
+    margin-right: 30px;
+}
+
+.sort-list li:nth-child(2) {
+    margin-right: 35px;
+}
+
+.sort-list .sort-low,
+.sort-list .sort-high {
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
 }
 
 .sort-list .sort--current {
@@ -817,11 +993,49 @@ a {
     color: rgba(0, 0, 0, 1);
 }
 
+.catalog {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-list {
+    margin: 0;
+    padding: 70px 20px 0 70px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalog-item {
+    margin-bottom: 50px;
+}
+
+.catalog-list li:nth-child(2n + 1) {
+    margin-right: 40px;
+}
+
 .catalog-item a {
     font-size: 18px;
     line-height: 24px;
     color: rgba(0, 0, 0, 1);
     letter-spacing: 0.2px;
+}
+
+.catalog-item p {
+    margin: 0;
+}
+
+.catalog-item h3 {
+    margin: 0;
+    width: 280px;
+}
+
+.catalog-item .catalog-item--image {
+    margin-bottom: 20px;
+}
+
+.catalog-item .catalog-item--wrap {
+    display: flex;
+    justify-content: space-between;
 }
 
 .catalog-item img:hover,
@@ -840,14 +1054,30 @@ a {
 .pagination-list {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-right: 20px;
+    padding: 0;
+}
+
+.pagination-numbers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
 }
 
 .pagination-list a {
+    display: block;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 24px;
     color: rgba(0, 0, 0, 0.3);
     letter-spacing: 3.2px;
+    padding: 20px 30px;
 }
 
 .pagination-list a:hover:not(.button),
