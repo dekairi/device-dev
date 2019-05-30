@@ -34,6 +34,21 @@ body {
     color: #000000;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+    text-decoration: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 .slider,
 .catalog-menu,
 .brands,
@@ -436,6 +451,20 @@ a {
     font-weight: 800;
     font-size: 18px;
     line-height: 22px;
+    padding: 8px 25px;
+    position: relative;
+}
+
+.btn::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 8px;
+    background-color: rgba(240, 197, 46, 1);
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    margin-top: -4px;
 }
 
 .btn:active,
