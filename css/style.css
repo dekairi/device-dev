@@ -1341,6 +1341,7 @@ a {
     background-image: url("../img/icons/arrow-up.svg");
     background-repeat: no-repeat;
     right: -40px;
+    top: 30px;
 }
 
 .sort-list li:last-child::before {
@@ -1351,6 +1352,7 @@ a {
     background-image: url("../img/icons/arrow-down.svg");
     background-repeat: no-repeat;
     right: -70px;
+    top: 30px;
 }
 
 .sort-low-high--current {
@@ -1465,7 +1467,6 @@ a {
     margin: 0;
     display: flex;
     justify-content: space-between;
-    width: 90px;
 }
 
 .pagination-list a {
@@ -1475,7 +1476,7 @@ a {
     line-height: 24px;
     color: rgba(0, 0, 0, 0.3);
     letter-spacing: 3.2px;
-    padding: 20px 30px;
+    padding: 20px;
 }
 
 .pagination-item:hover a,
