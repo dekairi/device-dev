@@ -1067,7 +1067,7 @@ a {
 }
 
 .container--wrap {
-    padding: 45px 60px 0 60px;
+    padding: 45px 0 0 0;
     margin: 0 auto 50px auto;
     width: 1000px;
 }
@@ -1099,6 +1099,21 @@ a {
 
 .breadcrumbs {
     list-style: none;
+}
+
+.breadcrumbs li:not(:last-child) {
+    position: relative;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 8px;
+    background-image: url("../img/icons/arrow.svg");
+    background-repeat: no-repeat;
+    right: -20px;
+    bottom: 7px;
 }
 
 .breadcrumbs a {

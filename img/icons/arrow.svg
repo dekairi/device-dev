@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="7px" viewBox="0 0 4 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>nav-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Catalog" transform="translate(-268.000000, -344.000000)" fill="#000000">
+            <g id="nav" transform="translate(199.000000, 262.000000)">
+                <g id="nav-arrow" transform="translate(68.000000, 81.000000)">
+                    <g id="Shape">
+                        <path d="M4.83,4.132 L1.861,1.144 C1.76700269,1.04841598 1.63855894,0.994582016 1.5045,0.994582016 C1.37044106,0.994582016 1.24199731,1.04841598 1.148,1.144 C0.949893822,1.34233815 0.949893822,1.66366185 1.148,1.862 L3.759,4.491 L1.148,7.12 C0.949663783,7.31902369 0.949663783,7.64097631 1.148,7.84 C1.24199731,7.93558402 1.37044106,7.98941798 1.5045,7.98941798 C1.63855894,7.98941798 1.76700269,7.93558402 1.861,7.84 L4.83,4.852 C4.92462014,4.75612243 4.97746585,4.62670436 4.97700884,4.492 C4.97779509,4.35723181 4.92489996,4.22769271 4.83,4.132 L4.83,4.132 Z" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
