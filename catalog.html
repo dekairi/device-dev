@@ -13,30 +13,40 @@
                     <img src="img/icons/logo.svg" alt="Логотип магазин Device" width="164" height="36">
                 </a>
                 <div class="user-nav user-nav--logout">
-                    <input class="login-search" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-                    <a class="user-name" href="#">Валентин Петухов</a>
-                    <a class="login-link login-link--logout" href="#">Выйти</a>
-                    <a class="compare-link" href="#">Сравнить</a>
-                    <a class="cart-link" href="#">Корзина</a>
+                    <div class="search--wrap">
+                        <input class="search" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                    </div>
+                    <div class="user-name--wrap">
+                        <a class="user-name user-nav-link" href="#">Валентин Петухов</a>
+                    </div>
+                    <div class="logout--wrap">
+                        <a class="login-link login-link--logout user-nav-link" href="#">Выйти</a>
+                    </div>
+                    <div class="compare--wrap">
+                        <a class="compare-link user-nav-link" href="#">Сравнить</a>
+                    </div>
+                    <div class="cart--wrap">
+                        <a class="cart-link user-nav-link" href="#">Корзина</a>
+                    </div>
                 </div>
                 <ul class="menu-list user-nav--logout">
-                    <li>
-                        <a href="#">Каталог товаров</a>
+                    <li class="menu-item catalog-header-menu">
+                        <a href="catalog.html">Каталог товаров</a>
                         <section class="catalog-submenu">
                             <h2 class="visually--hidden">Каталог товаров</h2>
-                            <ul class="catalog-list">
-                                <li><a href="#">Виртуальная реальность</a></li>
-                                <li><a>Моноподы для селфи</a></li>
-                                <li><a href="#">Экшн-камеры</a></li>
-                                <li><a href="#">Фитнес-браслеты</a></li>
-                                <li><a href="#">Умные часы</a></li>
-                                <li><a href="#">Квадрокоптеры</a></li>
+                            <ul class="subcatalog-list">
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Виртуальная реальность</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="catalog.html" target="_blank">Моноподы для селфи</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Экшн-камеры</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Фитнес-браслеты</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Умные часы</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Квадрокоптеры</a></li>
                             </ul>
                         </section>
                     </li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Гарантия</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li class="menu-item"><a href="#">Доставка</a></li>
+                    <li class="menu-item"><a href="#">Гарантия</a></li>
+                    <li class="menu-item"><a href="#">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -210,10 +220,10 @@
                         <img src="img/icons/logo-yellow.svg" alt="Логотип Device" width="164" height="36">
                     </a>
                     <div class="user-nav user-nav--logout">
-                        <a class="user-name" href="#">Валентин Петухов</a>
-                        <a class="login-link login-link--logout" href="#">Выйти</a>
-                        <a class="compare-link" href="#">Сравнить</a>
-                        <a class="cart-link" href="#">Корзина</a>
+                        <a class="footer-user-name" href="#">Валентин Петухов</a>
+                        <a class="lfooter-ogin-link login-link--logout" href="#">Выйти</a>
+                        <a class="footer-compare-link" href="#">Сравнить</a>
+                        <a class="footer-cart-link" href="#">Корзина</a>
                     </div>
                 </div>
                 <div class="footer-contacts--wrap">

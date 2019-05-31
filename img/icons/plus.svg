@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>plus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+        <g transform="translate(-430.000000, -475.000000)" fill="#272525" id="каталог-доставка-гарантия-контакты">
+            <g transform="translate(25.000000, 463.000000)">
+                <g id="plus" transform="translate(405.000000, 12.000000)">
+                    <g id="Shape">
+                        <polygon fill-rule="nonzero" points="16 7 9 7 9 0 7 0 7 7 0 7 0 9 7 9 7 16 9 16 9 9 16 9"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

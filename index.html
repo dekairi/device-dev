@@ -13,29 +13,37 @@
                     <img src="img/icons/logo.svg" width="164" height="36" alt="Логотип магазина Device">
                 </a>
                 <div class="user-nav">
-                    <input type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-                    <a class="login-link" href="#">Войти</a>
-                    <a class="compare-link" href="#">Сравнить</a>
-                    <a class="cart-link" href="#">Корзина</a>
+                    <div class="search--wrap">
+                        <input class="search" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                    </div>
+                    <div class="login--wrap">
+                        <a class="login-link user-nav-link" href="#">Войти</a>
+                    </div>
+                    <div class="compare--wrap">
+                        <a class="compare-link user-nav-link" href="#">Сравнить</a>
+                    </div>
+                    <div class="cart--wrap">
+                        <a class="cart-link user-nav-link" href="#">Корзина</a>
+                    </div>
                 </div>
                 <ul class="menu-list">
-                    <li>
+                    <li class="menu-item catalog-header-menu">
                         <a href="catalog.html">Каталог товаров</a>
                         <section class="catalog-submenu">
                             <h2 class="visually--hidden">Каталог товаров</h2>
-                            <ul class="catalog-list">
-                                <li><a href="#">Виртуальная реальность</a></li>
-                                <li><a href="catalog.html">Моноподы для селфи</a></li>
-                                <li><a href="#">Экшн-камеры</a></li>
-                                <li><a href="#">Фитнес-браслеты</a></li>
-                                <li><a href="#">Умные часы</a></li>
-                                <li><a href="#">Квадрокоптеры</a></li>
+                            <ul class="subcatalog-list">
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Виртуальная реальность</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="catalog.html" target="_blank">Моноподы для селфи</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Экшн-камеры</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Фитнес-браслеты</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Умные часы</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="#">Квадрокоптеры</a></li>
                             </ul>
                         </section>
                     </li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Гарантия</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li class="menu-item"><a href="#">Доставка</a></li>
+                    <li class="menu-item"><a href="#">Гарантия</a></li>
+                    <li class="menu-item"><a href="#">Контакты</a></li>
                 </ul>
             </nav>
         </header>
