@@ -441,6 +441,16 @@ a {
     letter-spacing: 0.5px;
     width: 400px;
     margin-bottom: 10px;
+    position: relative;
+}
+
+.slider b::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 7px;
+    background-color: rgba(255, 255, 255, 1);
+    top: -45px;
 }
 
 .slide .btn {
@@ -801,6 +811,17 @@ a {
     letter-spacing: 0.5px;
     margin-top: 60px;
     margin-bottom: 40px;
+    position: relative;
+}
+
+.about-us h2::before,
+.contacts h2::before {
+    content: "";
+    width: 80px;
+    height: 7px;
+    background-color: rgba(0, 0, 0, 1);
+    top: -60px;
+    position: absolute;
 }
 
 .about-us p,
@@ -819,11 +840,24 @@ a {
 }
 
 .partners-list {
-    list-style: none;
+    list-style-type: none;
     font-size: 16px;
     line-height: 40px;
     letter-spacing: normal;
     margin-bottom: 85px;
+    padding-left: 33px;
+}
+
+.partners-list .partners-item {
+    position: relative;
+}
+
+.partners-list .partners-item::before {
+    content: "◦";
+    color: rgba(229, 229, 229, 1);
+    position: absolute;
+    left: -33px;
+    font-size: 24px;
 }
 
 .main-footer {
