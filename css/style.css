@@ -50,7 +50,7 @@ html {
 }
 
 .slider,
-.catalog-menu,
+.main-catalog-menu,
 .brands,
 .contacts-info--wrap,
 .information--wrap,
@@ -523,19 +523,30 @@ a {
     margin-right: 20px;
 }
 
-.catalog-menu {
+.main-catalog-menu {
     margin-bottom: 60px;
 }
 
-.catalog-menu .catalog-menu-list {
+.main-catalog-menu .main-catalog-menu-list {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
-.catalog-menu-list h3::after {
+.main-catalog-menu .main-catalog-item {
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.main-catalog-menu-list .main-catalog-item--title {
+    width: 160px;
+}
+
+.main-catalog-menu-list .main-catalog-item--title::after {
     content: "";
     position: absolute;
     width: 160px;
@@ -545,15 +556,35 @@ a {
     cursor: pointer;
 }
 
-.catalog-item-vr h3::after {
+.main-catalog-item-vr .main-catalog-item--title::after {
     background: url("../img/icons/vr.svg") no-repeat center center;
 }
 
-.catalog-menu-list h3 {
+.main-catalog-item-monopods .main-catalog-item--title::after {
+    background: url("../img/icons/monopods.svg") no-repeat center center;
+}
+
+.main-catalog-item-action-cameras .main-catalog-item--title::after {
+    background: url("../img/icons/action-cameras.svg") no-repeat center center;
+}
+
+.main-catalog-item-fit-bracelet .main-catalog-item--title::after {
+    background: url("../img/icons/fit-bracelet.svg") no-repeat center center;
+}
+
+.main-catalog-item-smart-watch .main-catalog-item--title::after {
+    background: url("../img/icons/smart-watch.svg") no-repeat center center;
+}
+
+.main-catalog-item-copters .main-catalog-item--title::after {
+    background: url("../img/icons/copters.svg") no-repeat center center;
+}
+
+.main-catalog-menu-list .main-catalog-item--title {
     width: 160px;
 }
 
-.catalog-menu-list a {
+.main-catalog-menu-list a {
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
@@ -561,7 +592,7 @@ a {
     letter-spacing: 0.2px;
 }
 
-.catalog-menu-list li::before {
+.main-catalog-menu-list .main-catalog-item::before {
     content: "";
     display: block;
     width: 160px;
@@ -569,17 +600,18 @@ a {
     background-color: rgba(240, 197, 46, 0.5);
 }
 
-.catalog-menu-list li:hover::before,
-.catalog-menu-list li:focus::before {
+.main-catalog-item:hover::before,
+.main-catalog-item:focus::before {
     background-color: rgba(240, 197, 46, 1);
 }
 
-.catalog-menu-list li:active::before {
-    background-color: rgba(240, 197, 46, 1);
+.main-catalog-item:active .main-catalog-item--title::after,
+.main-catalog-item:active .main-catalog-item--title {
+    opacity: 0.3;
 }
 
-.catalog-menu-list a:active,
-.catalog-item-vr h3:active::after {
+.main-catalog-menu-list a:active,
+.main-catalog-item-vr .main-catalog-item--title:active::after {
     opacity: 0.3;
 }
 
