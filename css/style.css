@@ -1194,6 +1194,11 @@ a {
     position: relative;
 }
 
+.color input,
+.bluetooth input {
+    visibility: hidden;
+}
+
 .filter form {
     padding: 70px 70px 0 0;
 }
@@ -1316,11 +1321,40 @@ a {
     margin-right: 35px;
 }
 
-.sort-list .sort-low,
-.sort-list .sort-high {
+.sort-list li:not(.sort-low-high--current):hover {
+    cursor: pointer;
+}
+
+.sort-list .sort-low-high,
+.sort-list .sort-low-high {
     line-height: 0;
     font-size: 0;
     color: transparent;
+    position: relative;
+}
+
+.sort-list li:nth-child(4)::before {
+    content: "";
+    width: 11px;
+    height: 10px;
+    position: absolute;
+    background-image: url("../img/icons/arrow-up.svg");
+    background-repeat: no-repeat;
+    right: -40px;
+}
+
+.sort-list li:last-child::before {
+    content: "";
+    width: 11px;
+    height: 10px;
+    position: absolute;
+    background-image: url("../img/icons/arrow-down.svg");
+    background-repeat: no-repeat;
+    right: -70px;
+}
+
+.sort-low-high--current {
+    opacity: 0.2;
 }
 
 .sort-list .sort--current {
@@ -1394,6 +1428,27 @@ a {
     letter-spacing: 0.2px;
 }
 
+.catalog-item--new {
+    position: relative;
+}
+
+.catalog-item--new::before {
+    content: "New";
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    width: 64px;
+    height: 63px;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+    padding: 16px 15px;
+    top: 27px;
+    right: 25px;
+}
+
 .pagination-list {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.08);
@@ -1423,12 +1478,29 @@ a {
     padding: 20px 30px;
 }
 
-.pagination-list a:hover:not(.button),
-.pagination-list a:focus:not(.button) {
+.pagination-item:hover a,
+.pagination-item:focus a,
+.pagination-item:hover a,
+.pagination-item:focus a {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.pagination-list a:active:not(.button) {
+.pagination-item:hover a.button,
+.pagination-item:focus a.button,
+.pagination-item:hover a.pagination-item--current,
+.pagination-item:focus a.pagination-item--current {
+    color: rgba(0, 0, 0, 1);
+}
+
+.pagination-item:active a.button {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item:active a.pagination-number {
+    color: rgba(0, 0, 0, 1);
+}
+
+.pagination-item:active a.pagination-item--current {
     color: rgba(0, 0, 0, 1);
 }
 
