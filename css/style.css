@@ -802,6 +802,7 @@ a {
 
 .contacts img {
     margin: 10px 0 85px 0;
+    cursor: pointer;
 }
 
 .about-us h2,
@@ -1062,8 +1063,15 @@ a {
     opacity: 0.3;
 }
 
-.modal-map {
+.modal--show {
+    display: block;
+}
+
+.modal--hide {
     display: none;
+}
+
+.modal-map {
     position: absolute;
     bottom: -1600px;
     left: 0;
@@ -1098,7 +1106,6 @@ a {
 }
 
 .modal-feedback {
-    display: none;
     position: fixed;
     top: 50%;
     left: 50%;

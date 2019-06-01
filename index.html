@@ -198,8 +198,8 @@
                 <section class="contacts">
                     <h2>Контакты</h2>
                     <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                    <img src="img/content/map.png" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15" width="560" height="222">
-                    <a class="btn" href="#">Напишите нам</a>
+                    <img id="small-map" src="img/content/map.png" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15" width="560" height="222">
+                    <a id="write-us-btn" class="btn" href="#">Напишите нам</a>
                 </section>
             </div>
         </main>
@@ -334,9 +334,9 @@
             </nav>
         </footer>
 
-        <section class="modal modal-feedback">
+        <section id="feedback" class="modal modal-feedback modal--hide">
             <h2 class="visually--hidden">Обратная связь</h2>
-            <button class="close-btn" type="button"></button>
+            <button id="btn-close-feedback" class="close-btn" type="button"></button>
             <form action="http://echo.htmlacademy.ru" method="post">
                 <div class="name-email--wrap">
                     <div class="name--wrap">
@@ -357,12 +357,14 @@
             </form>
         </section>
 
-        <section class="modal modal-map">
+        <section id="big-map" class="modal modal-map modal--hide">
             <h2 class="visually--hidden">Карта проезда</h2>
-            <button class="close-btn" type="button"></button>
+            <button id="btn-close-map" class="close-btn" type="button"></button>
             <!-- TODO: finish the map after JS (Yandex/Google) -->
             <div id="map"></div>
             <img src="img/content/map-big.png" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15" width="960" height="559">
         </section>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
