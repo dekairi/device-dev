@@ -1064,9 +1064,41 @@ a {
 
 .modal-map {
     display: none;
+    position: absolute;
+    bottom: -1600px;
+    left: 0;
+    width: 960px;
+    height: 559px;
+    margin-left: 280px;
+    margin-top: 480px;
+}
+
+.modal-map .close-btn {
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icons/modal-close.svg");
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    opacity: 0.5;
+    position: absolute;
+    padding: 0;
+    top: 22px;
+    right: 22px;
+    cursor: pointer;
+}
+
+.modal-map .close-btn:hover,
+.modal-map .close-btn:focus {
+    opacity: 1;
+}
+
+.modal-map .close-btn:active {
+    opacity: 0.3;
 }
 
 .modal-feedback {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
