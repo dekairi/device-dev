@@ -336,20 +336,25 @@
 
         <section class="modal modal-feedback">
             <h2 class="visually--hidden">Обратная связь</h2>
-            <form action="http://echo.htmlacademy.ru" method="post">
-                <label for="full-name">Ваше имя:</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Имя Фамилия" required>
-
-                <label for="email">Ваш e-mail:</label>
-                <input type="email" id="email" name=email placeholder="email@example.com" required>
-
-                <label for="feedback-text">Текст письма:</label>
-                <textarea id="feedback-text" name="feedback-text" placeholder="В свободной форме" required></textarea>
-
-                <button type="submit">Отправить</button>
-            </form>
-
             <button class="close-btn" type="button"></button>
+            <form action="http://echo.htmlacademy.ru" method="post">
+                <div class="name-email--wrap">
+                    <div class="name--wrap">
+                        <label for="full-name">Ваше имя:</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Имя Фамилия" required>
+                    </div>
+                    <div class="email--wrap">
+                        <label for="email">Ваш e-mail:</label>
+                        <input type="email" id="email" name=email placeholder="email@example.com" required>
+                    </div>
+                </div>
+                <div class="text--wrap">
+                    <label for="feedback-text">Текст письма:</label>
+                    <textarea id="feedback-text" name="feedback-text" placeholder="В свободной форме" required></textarea>
+                </div>
+
+                <button class="btn" type="submit">Отправить</button>
+            </form>
         </section>
 
         <section class="modal modal-map">

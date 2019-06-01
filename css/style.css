@@ -1062,8 +1062,118 @@ a {
     opacity: 0.3;
 }
 
-.modal {
+.modal-map {
     display: none;
+}
+
+.modal-feedback {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 960px;
+    height: 553px;
+    margin-left: -480px;
+    margin-top: -276px;
+    padding: 100px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal-feedback .close-btn {
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icons/modal-close.svg");
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    opacity: 0.5;
+    position: absolute;
+    padding: 0;
+    top: 22px;
+    right: 22px;
+    cursor: pointer;
+}
+
+.modal-feedback .close-btn:hover,
+.modal-feedback .close-btn:focus {
+    opacity: 1;
+}
+
+.modal-feedback .close-btn:active {
+    opacity: 0.3;
+}
+
+.modal-feedback form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-email--wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.name-email--wrap input,
+.text--wrap textarea {
+    border: 3px solid rgba(242, 242, 242, 1);
+    background-color: rgba(242, 242, 242, 1);
+    padding: 0 0 0 20px;
+}
+
+.name-email--wrap label {
+    margin-bottom: 10px;
+}
+
+.name-email--wrap input:hover,
+.text--wrap textarea:hover {
+    border: 3px solid rgba(235, 235, 235, 1);
+    background-color: rgba(235, 235, 235, 1);
+}
+
+.name-email--wrap input:focus,
+.text--wrap textarea:focus {
+    outline: none;
+    border: 3px solid rgba(248, 226, 151, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.name-email--wrap input::placeholder,
+.text--wrap textarea::placeholder {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.name-email--wrap input {
+    width: 360px;
+    height: 50px;
+}
+
+.text--wrap textarea {
+    resize: none;
+    width: 760px;
+    height: 156px;
+    padding: 14px 0 0 20px;
+    margin-top: 10px;
+}
+
+.text--wrap {
+    margin-bottom: 30px;
+}
+
+.name--wrap,
+.email--wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-feedback .btn {
+    align-self: flex-start;
+    cursor: pointer;
 }
 
 .container--wrap {
