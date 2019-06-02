@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
     let btnWriteUs = document.querySelector('#write-us-btn');
     let elFeedback = document.querySelector('#feedback');
-    let btnCloseFeedback= document.querySelector("#btn-close-feedback");
+    let btnCloseFeedback = document.querySelector("#btn-close-feedback");
 
     let map = document.querySelector('#small-map');
     let elMap = document.querySelector('#big-map');

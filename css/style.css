@@ -56,7 +56,7 @@ html {
 .information--wrap,
 .main-header {
     box-sizing: border-box;
-    width: 1160px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -112,7 +112,7 @@ a {
 
 .user-nav .login--wrap {
     position: relative;
-    width: 260px;
+    width: 270px;
 }
 
 .user-nav .logout--wrap {
@@ -239,7 +239,7 @@ a {
 .user-nav .compare--wrap {
     width: 100px;
     position: relative;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .user-nav .compare-link::before {
@@ -346,7 +346,7 @@ a {
 }
 
 .menu-list {
-    margin: 40px 0 0 0;
+    margin: 35px 0 0 0;
     padding: 0;
 }
 
@@ -387,7 +387,7 @@ a {
 
 .slider .slide::before {
     content: "";
-    width: 1120px;
+    width: 1160px;
     background-color: rgba(240, 197, 46, 0.5);
     margin: 0;
     line-height: 0;
@@ -395,7 +395,7 @@ a {
     color: transparent;
     text-align: right;
     position: absolute;
-    height: 140px;
+    height: 135px;
     z-index: -1;
     padding-top: 30px;
     box-sizing: content-box;
@@ -456,13 +456,15 @@ a {
 .slide .btn {
     align-self: flex-start;
     margin: 0 0 60px 0;
+    width: 220px;
+    text-align: center;
 }
 
 .slide .slider-info--wrap {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 140px 120px 0 100px;
+    margin: 130px 120px 0 125px;
 }
 
 .slider .slide-description {
@@ -472,7 +474,7 @@ a {
     line-height: 30px;
     letter-spacing: 0.2px;
     width: 490px;
-    margin-bottom: 60px;
+    margin: 10px 0 45px 0;
 }
 
 
@@ -508,8 +510,8 @@ a {
     position: absolute;
     margin: 0;
     padding: 0;
-    right: 85px;
-    top: 395px;
+    right: 105px;
+    top: 365px;
     display: flex;
 }
 
