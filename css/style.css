@@ -493,7 +493,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .slide .image--wrap {
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 48%;
 }
 
 .slide img {
@@ -1036,6 +1036,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .main-footer--logo {
     cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0;
 }
 
 .main-footer--logo img:hover,
@@ -1077,9 +1080,19 @@ input[type="search"]::-webkit-search-results-decoration {
     opacity: 0.3;
 }
 
+.footer-user-nav--wrap,
+.footer-contacts--wrap,
+.footer-social--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 .footer-user-nav--wrap {
     margin-bottom: 40px;
     text-align: right;
+    position: relative;
+    justify-content: flex-end;
 }
 
 .footer-user-nav a:active {
@@ -1098,17 +1111,9 @@ input[type="search"]::-webkit-search-results-decoration {
 .footer-nav {
     width: 1160px;
     margin: 0 auto;
-    padding: 65px 20px 55px 20px;
+    padding: 63px 0 55px 0;
     display: flex;
     flex-direction: column;
-}
-
-.footer-user-nav--wrap,
-.footer-contacts--wrap,
-.footer-social--wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 
 .footer-nav .footer-user-nav {
@@ -1118,12 +1123,17 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .footer-user-nav {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .footer-user-nav .footer-login--wrap,
 .footer-user-nav .footer-compare--wrap {
-    margin-right: 20px;
+    margin-right: 30px;
+}
+
+.footer-login--wrap a,
+.footer-compare--wrap a {
+    margin-left: 10px;
 }
 
 .footer-compare--wrap {
@@ -1139,7 +1149,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .footer-contacts--wrap {
-    margin-bottom: 65px;
+    margin-bottom: 60px;
 }
 
 .footer-address,
@@ -1148,7 +1158,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .footer-menu-list li:not(:last-child) {
-    margin-right: 45px;
+    margin-right: 35px;
 }
 
 .footer-menu-list a {
@@ -1174,7 +1184,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .footer-menu-list {
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 40px 0 0;
     padding: 0;
 }
 
@@ -1193,7 +1203,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .footer-social-list {
     list-style: none;
-    margin: 0 0 0 500px;
+    margin: 0 0 0 505px;
     padding: 0;
     display: flex;
     justify-content: space-between;
