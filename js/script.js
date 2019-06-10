@@ -1,31 +1,90 @@
 window.addEventListener('DOMContentLoaded', function () {
-    let btnWriteUs = document.querySelector('#write-us-btn');
-    let elFeedback = document.querySelector('#feedback');
-    let btnCloseFeedback = document.querySelector("#btn-close-feedback");
+    let btnWriteUs = document.getElementById('write-us-btn');
+    let elFeedback = document.getElementById('feedback');
+    let elForm = elFeedback.querySelector(".feedback-form");
+    let btnCloseFeedback = document.getElementById("btn-close-feedback");
 
-    let map = document.querySelector('#small-map');
-    let elMap = document.querySelector('#big-map');
-    let btnCloseMap = document.querySelector('#btn-close-map');
+    let elName = elFeedback.querySelector(".feedback-name");
+    let elEmail = elFeedback.querySelector(".feedback-email");
+    let elMessage = elFeedback.querySelector(".feedback-message");
+
+    let isStorageSupport = true;
+    let storage = {};
+
+    try {
+        storage["name"] = localStorage.getItem("name");
+        storage["email"] = localStorage.getItem("email");
+    } catch (err) {
+        isStorageSupport = false;
+    }
 
     btnWriteUs.addEventListener('click', function (evt) {
         evt.preventDefault();
         elFeedback.classList.add('modal--show');
-        elFeedback.classList.remove('modal--hide');
+        emptyFields();
+        if (storage) {
+            elName.value = storage["name"];
+            elEmail.value = storage["email"];
+            elMessage.focus();
+        } else {
+            elName.focus();
+        }
     });
 
-    btnCloseFeedback.addEventListener('click', function () {
+    btnCloseFeedback.addEventListener('click', function (evt) {
+        evt.preventDefault();
         elFeedback.classList.remove('modal--show');
-        elFeedback.classList.add('modal--hide');
     });
 
     document.addEventListener('keydown', function (evt) {
         if (evt.key === "Escape") {
-            elFeedback.classList.remove('modal--show');
-            elFeedback.classList.add('modal--hide');
-            elMap.classList.remove('modal--show');
-            elMap.classList.add('modal--hide');
+            if (elFeedback.classList.contains("modal--show")) {
+                elFeedback.classList.remove("modal--show");
+                elFeedback.classList.remove("modal--error");
+                elName.classList.remove("input--error");
+                elEmail.classList.remove("input--error");
+                elMessage.classList.remove("textarea--error");
+            }
         }
     });
+
+    elForm.addEventListener("submit", function (evt) {
+        if (!elName.value || !elEmail.value || !elMessage.value) {
+            evt.preventDefault();
+            elFeedback.classList.remove("modal--error");
+            elFeedback.offsetWidth = elFeedback.offsetWidth;
+            elFeedback.classList.add("modal--error");
+            if (!elName.value) {
+                elName.focus();
+                elName.classList.add("input--error");
+            }
+            if (!elEmail.value) {
+                elEmail.focus();
+                elEmail.classList.add("input--error");
+            }
+            if (!elMessage.value) {
+                elMessage.focus();
+                elMessage.classList.add("textarea--error");
+            }
+        } else {
+            if (isStorageSupport) {
+                localStorage.setItem("name", elName.value);
+                localStorage.setItem("email", elEmail.value);
+            }
+        }
+    });
+
+    let emptyFields = function() {
+        elName.value = "";
+        elEmail.value = "";
+        elMessage.value = "";
+    };
+
+    //map
+
+    let map = document.querySelector('#small-map');
+    let elMap = document.querySelector('#big-map');
+    let btnCloseMap = document.querySelector('#btn-close-map');
 
     map.addEventListener('click', function () {
         elMap.classList.add('modal--show');
