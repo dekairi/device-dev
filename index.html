@@ -369,11 +369,13 @@
         <section id="big-map" class="modal modal-map">
             <h2 class="visually--hidden">Карта проезда</h2>
             <button id="btn-close-map" class="close-btn" type="button"></button>
-            <!-- TODO: finish the map after JS (Yandex/Google) -->
-            <div id="map"></div>
-            <img src="img/content/map-big.png" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15" width="960" height="559">
+            <div class="map-image--wrap">
+                <img src="img/content/map-big.png" alt="Магазин находится по адресу г. Москва, ул. Строителей, 15" width="960" height="559">
+            </div>
+            <div class="interactive-map" id="map"></div>
         </section>
 
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=cd34823f-0b8b-4aba-be82-72027d93120e&lang=en_US"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

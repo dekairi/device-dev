@@ -11,6 +11,10 @@ window.addEventListener('DOMContentLoaded', function () {
     let isStorageSupport = true;
     let storage = {};
 
+    let map = document.querySelector('#small-map');
+    let elMap = document.querySelector('#big-map');
+    let btnCloseMap = document.querySelector('#btn-close-map');
+
     try {
         storage["name"] = localStorage.getItem("name");
         storage["email"] = localStorage.getItem("email");
@@ -45,6 +49,8 @@ window.addEventListener('DOMContentLoaded', function () {
                 elEmail.classList.remove("input--error");
                 elMessage.classList.remove("textarea--error");
             }
+
+            elMap.classList.remove('modal--show');
         }
     });
 
@@ -81,20 +87,42 @@ window.addEventListener('DOMContentLoaded', function () {
     };
 
     //map
-
-    let map = document.querySelector('#small-map');
-    let elMap = document.querySelector('#big-map');
-    let btnCloseMap = document.querySelector('#btn-close-map');
-
-    map.addEventListener('click', function () {
+    map.addEventListener('click', function (evt) {
+        evt.preventDefault();
         elMap.classList.add('modal--show');
-        elMap.classList.remove('modal--hide');
     });
 
-    btnCloseMap.addEventListener('click', function () {
+    btnCloseMap.addEventListener('click', function (evt) {
+        evt.preventDefault();
         elMap.classList.remove('modal--show');
-        elMap.classList.add('modal--hide');
     });
+
+    ymaps.ready(init);
+    function init() {
+        let elMap = document.querySelector(".map-image--wrap");
+        elMap.classList.toggle("map-image--hide");
+        let elInteractiveMap = document.querySelector(".interactive-map");
+        elInteractiveMap.classList.toggle("interactive-map--show");
+
+        let myMap = new ymaps.Map("map", {
+                center: [55.686980, 37.529654],
+                zoom: 17,
+                controls: []
+            }, {
+                searchControlProvider: "yandex#search"
+            }),
+
+            MyIconContentLayout = new ymaps.templateLayoutFactory.createClass(
+                "<div style='color: #FFFFFF; font-weight: bold;'>$[properties.iconContent]</div>"
+            ),
+
+            myPlacemark = new ymaps.Placemark([55.686980, 37.529654], {
+                hintContent: "",
+                balloonContent: ""
+            });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
 
     //slider
     let slides = document.querySelectorAll(".slide");
