@@ -74,4 +74,36 @@ window.addEventListener('DOMContentLoaded', function () {
             btnSearch.focus();
         }
     });
+
+    //slide-show information
+    let lisInfo = document.querySelectorAll(".info-menu-item");
+    let btnsInfo = document.querySelectorAll(".info-menu-item .btn");
+    let infoSlides = document.querySelectorAll(".info-item");
+
+    for (let i = 0; i < lisInfo.length; i++) {
+        lisInfo[i].addEventListener("click", function (evt) {
+            evt.preventDefault();
+            removeActiveStatusFromButtons();
+            lisInfo[i].classList.add("info-menu--current");
+            btnsInfo[i].classList.add("btn--current");
+            removeActiveStatusFromInfoSlides();
+            slides[i].classList.add("info--current");
+        });
+    }
+
+    function removeActiveStatusFromButtons() {
+        for (let i = 0; i < lisInfo.length; i++) {
+            lisInfo[i].classList.remove("info-menu--current");
+        }
+
+        for (let i = 0; i < btnsInfo.length; i++) {
+            btnsInfo[i].classList.remove("btn--current");
+        }
+    }
+
+    function removeActiveStatusFromInfoSlides() {
+        for (let i = 0; i < infoSlides.length; i++) {
+            infoSlides[i].classList.remove("info--current");
+        }
+    }
 });
