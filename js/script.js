@@ -7,8 +7,8 @@ window.addEventListener('DOMContentLoaded', function () {
     let elMap = document.querySelector('#big-map');
     let btnCloseMap = document.querySelector('#btn-close-map');
 
-    btnWriteUs.addEventListener('click', function (event) {
-        event.preventDefault();
+    btnWriteUs.addEventListener('click', function (evt) {
+        evt.preventDefault();
         elFeedback.classList.add('modal--show');
         elFeedback.classList.remove('modal--hide');
     });
@@ -18,8 +18,8 @@ window.addEventListener('DOMContentLoaded', function () {
         elFeedback.classList.add('modal--hide');
     });
 
-    document.addEventListener('keydown', function (event) {
-        if (event.keyCode === 27) {
+    document.addEventListener('keydown', function (evt) {
+        if (evt.key === "Escape") {
             elFeedback.classList.remove('modal--show');
             elFeedback.classList.add('modal--hide');
             elMap.classList.remove('modal--show');
@@ -62,4 +62,16 @@ window.addEventListener('DOMContentLoaded', function () {
             slides[i].classList.remove("slide--active");
         }
     }
+
+    //search focus
+    let inputSearch = document.querySelector(".search");
+    let btnSearch = document.querySelector(".search-btn");
+
+    inputSearch.addEventListener("keydown", function (evt) {
+        if (evt.key === "Tab") {
+            evt.preventDefault();
+            btnSearch.style.visibility = "visible";
+            btnSearch.focus();
+        }
+    });
 });
