@@ -306,8 +306,8 @@ a {
 .catalog-submenu {
     position: absolute;
     background-color: rgba(247, 226, 150, 1);
-    height: 175px;
-    width: 1120px;
+    height: 170px;
+    width: 1160px;
     z-index: 1;
     top: 20px;
     left: -60px;
@@ -383,6 +383,8 @@ a {
 
 .slider {
     position: relative;
+    height: 532px;
+    margin-bottom: 110px;
 }
 
 .slider .slide::before {
@@ -403,7 +405,21 @@ a {
 
 .slide {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 110px;
+    max-height: 532px;
+    position: absolute;
+    width: 1160px;
+}
+
+.slide:not(.slide--active) {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+}
+
+.slide .slide--active {
+    transition: opacity 1s ease-out;
+    opacity: 1;
 }
 
 .slide::after {
@@ -414,12 +430,28 @@ a {
     line-height: 180px;
     color: rgba(255, 255, 255, 1);
     letter-spacing: 1.8px;
-    right: 70px;
+    right: 80px;
     top: 40px;
+    z-index: -1;
+}
+
+.slide-1::after {
+    right: 60px;
+}
+
+.slide .image--wrap {
+    display: flex;
+    justify-content: center;
+    width: 50%;
 }
 
 .slide img {
-    margin: 60px 0 0 90px;
+    margin: 50px 0 0 0;
+    height: min-content;
+}
+
+.slide-3 img {
+    margin-top: 120px;
 }
 
 .slide-1::after {
@@ -444,6 +476,10 @@ a {
     position: relative;
 }
 
+.slide-3 b {
+    width: 550px;
+}
+
 .slider b::before {
     content: "";
     position: absolute;
@@ -455,7 +491,7 @@ a {
 
 .slide .btn {
     align-self: flex-start;
-    margin: 0 0 60px 0;
+    margin: 0 0 50px 0;
     width: 220px;
     text-align: center;
 }
@@ -464,7 +500,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 130px 120px 0 125px;
+    margin: 130px 60px 0 -10px;
+    width: 500px;
 }
 
 .slider .slide-description {
@@ -477,6 +514,18 @@ a {
     margin: 10px 0 45px 0;
 }
 
+.slide table {
+    max-width: 430px;
+}
+
+.slide-3 table {
+    max-width: 280px;
+}
+
+.slide tbody {
+    display: flex;
+    justify-content: space-between;
+}
 
 .slide td {
     display: block;
@@ -501,10 +550,6 @@ a {
     letter-spacing: 0.4px;
 }
 
-.slide-2, .slide-3 {
-    display: none;
-}
-
 .slider-dots-list {
     list-style: none;
     position: absolute;
@@ -513,6 +558,12 @@ a {
     right: 105px;
     top: 365px;
     display: flex;
+}
+
+.slider-dots-list .slider-dot-item--current {
+    border: none;
+    background-image: url("../img/icons/slider-button.svg");
+    background-repeat: no-repeat;
 }
 
 .slider-dots-list button {

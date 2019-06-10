@@ -36,4 +36,30 @@ window.addEventListener('DOMContentLoaded', function () {
         elMap.classList.remove('modal--show');
         elMap.classList.add('modal--hide');
     });
+
+    //slider
+    let slides = document.querySelectorAll(".slide");
+    let dots = document.querySelectorAll(".slider-dot-item");
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener("click", function (evt) {
+            evt.preventDefault();
+            removeActiveStatusFromDots();
+            dots[i].classList.add("slider-dot-item--current");
+            removeActiveStatusFromSlides();
+            slides[i].classList.add("slide--active");
+        });
+    }
+
+    function removeActiveStatusFromDots() {
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("slider-dot-item--current");
+        }
+    }
+
+    function removeActiveStatusFromSlides() {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("slide--active");
+        }
+    }
 });
