@@ -739,8 +739,14 @@ input[type="search"]::-webkit-search-results-decoration {
     list-style: none;
 }
 
-.info-list li:not(.info--current) {
-    display: none;
+.info-item:not(.info--current) {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+}
+
+.info-item.info--current {
+    transition: opacity 1s ease-out;
+    opacity: 1;
 }
 
 .btn {
@@ -858,13 +864,19 @@ input[type="search"]::-webkit-search-results-decoration {
     text-align: center;
 }
 
+.info-item {
+    position: absolute;
+    left: -5px;
+    top: 70px;
+}
+
 .info-list .info-item::before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -400px;
-    top: 0;
+    width: 172px;
+    height: 194px;
+    right: -275px;
+    top: -5px;
 }
 
 .info-list .info--delivery::before {

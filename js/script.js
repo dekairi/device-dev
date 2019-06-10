@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', function () {
             lisInfo[i].classList.add("info-menu--current");
             btnsInfo[i].classList.add("btn--current");
             removeActiveStatusFromInfoSlides();
-            slides[i].classList.add("info--current");
+            infoSlides[i].classList.add("info--current");
         });
     }
 
