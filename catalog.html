@@ -15,6 +15,7 @@
                 <div class="user-nav user-nav--logout">
                     <div class="search--wrap">
                         <input class="search" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+                        <button class="search-btn" type="submit" tabindex="-1">Найти</button>
                     </div>
                     <div class="user-name--wrap">
                         <a class="user-name user-nav-link" href="#">Валентин Петухов</a>
@@ -36,7 +37,7 @@
                             <h2 class="visually--hidden">Каталог товаров</h2>
                             <ul class="subcatalog-list">
                                 <li class="subcatalog-item"><a class="submenu-link" href="#">Виртуальная реальность</a></li>
-                                <li class="subcatalog-item"><a class="submenu-link" href="catalog.html" target="_blank">Моноподы для селфи</a></li>
+                                <li class="subcatalog-item"><a class="submenu-link" href="catalog.html">Моноподы для селфи</a></li>
                                 <li class="subcatalog-item"><a class="submenu-link" href="#">Экшн-камеры</a></li>
                                 <li class="subcatalog-item"><a class="submenu-link" href="#">Фитнес-браслеты</a></li>
                                 <li class="subcatalog-item"><a class="submenu-link" href="#">Умные часы</a></li>
@@ -69,7 +70,7 @@
                             <form action="http://echo.htmlacademy.ru" method="post">
                                 <fieldset class="price">
                                     <legend>Стоимость</legend>
-                                    <div>
+                                    <div class="filter-price">
                                         <label for="price-min">от 0</label>
                                         <button id="price-min">Граница меньшей цены</button>
 
@@ -80,44 +81,50 @@
 
                                 <fieldset class="color">
                                     <legend>Цвет</legend>
-
-                                    <ul>
-                                        <li>
-                                            <label for="black">Черный</label>
-                                            <input id="black" name="black" type="checkbox" checked>
-                                        </li>
-                                        <li>
-                                            <label for="white">Белый</label>
-                                            <input id="white" name="white" type="checkbox">
-                                        </li>
-                                        <li>
-                                            <label for="blue">Синий</label>
-                                            <input id="blue" name="blue" type="checkbox" checked>
-                                        </li>
-                                        <li>
-                                            <label for="red">Красный</label>
-                                            <input id="red" name="red" type="checkbox" checked>
-                                        </li>
-                                        <li>
-                                            <label for="pink">Розовый</label>
-                                            <input id="pink" name="pink" type="checkbox">
-                                        </li>
-                                    </ul>
+                                    <div>
+                                        <div class="checkbox" role="checkbox" aria-checked="true" tabindex="0">
+                                            <input class="visually--hidden" type="checkbox" name="black" checked>
+                                            <span class="checkbox-indicator"></span>
+                                            Черный
+                                        </div>
+                                        <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0">
+                                            <input class="visually--hidden" type="checkbox" name="white">
+                                            <span class="checkbox-indicator"></span>
+                                            Белый
+                                        </div>
+                                        <div class="checkbox" role="checkbox" aria-checked="true" tabindex="0">
+                                            <input class="visually--hidden" type="checkbox" name="blue" checked>
+                                            <span class="checkbox-indicator"></span>
+                                            Синий
+                                        </div>
+                                        <div class="checkbox" role="checkbox" aria-checked="true" tabindex="0">
+                                            <input class="visually--hidden" type="checkbox" name="red" checked>
+                                            <span class="checkbox-indicator"></span>
+                                            Красный
+                                        </div>
+                                        <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0">
+                                            <input class="visually--hidden" type="checkbox" name="pink">
+                                            <span class="checkbox-indicator"></span>
+                                            Розовый
+                                        </div>
+                                    </div>
                                 </fieldset>
 
                                 <fieldset class="bluetooth">
                                     <legend>Bluetooth</legend>
 
-                                    <ul>
-                                        <li>
-                                            <label for="bluetooth-yes">Есть</label>
-                                            <input id="bluetooth-yes" type="radio" name="bluetooth" value="1" checked>
-                                        </li>
-                                        <li>
-                                            <label for="bluetooth-no">Нет</label>
-                                            <input id="bluetooth-no" type="radio" name="bluetooth" value="0">
-                                        </li>
-                                    </ul>
+                                    <div class="bluetooth-radio-buttons" role="radiogroup">
+                                        <div class="radio" role="radio" tabindex="0" aria-checked="true">
+                                            <input class="visually--hidden" type="radio" name="bluetooth" value="1" checked>
+                                            <span class="radio-indicator"></span>
+                                            Есть
+                                        </div>
+                                        <div class="radio" role="radio" tabindex="-1" aria-checked="false">
+                                            <input class="visually--hidden" type="radio" name="bluetooth" value="0">
+                                            <span class="radio-indicator"></span>
+                                            Нет
+                                        </div>
+                                    </div>
                                 </fieldset>
 
                                 <button class="btn" type="submit">Показать</button>

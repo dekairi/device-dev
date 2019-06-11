@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>checkbox-off</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Catalog" transform="translate(-198.000000, -786.000000)" fill="#000000">
+            <g id="filter" transform="translate(0.000000, 405.000000)">
+                <g id="checkbox-off" transform="translate(198.000000, 381.000000)">
+                    <g id="Shape">
+                        <path d="M20,2 C20.542,2 21,2.458 21,3 L21,20 C21,20.542 20.542,21 20,21 L3,21 C2.458,21 2,20.542 2,20 L2,3 C2,2.458 2.458,2 3,2 L20,2 L20,2 Z M20,0 L3,0 C1.35,0 0,1.35 0,3 L0,20 C0,21.65 1.35,23 3,23 L20,23 C21.65,23 23,21.65 23,20 L23,3 C23,1.35 21.65,0 20,0 Z" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>radio-on</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Catalog" transform="translate(-198.000000, -1029.000000)" fill="#000000">
+            <g id="filter" transform="translate(0.000000, 405.000000)">
+                <g id="radio-on" transform="translate(198.000000, 624.000000)">
+                    <g>
+                        <path d="M12.5,4 C17.187,4 21,7.813 21,12.5 C21,17.187 17.187,21 12.5,21 C7.813,21 4,17.187 4,12.5 C4,7.813 7.813,4 12.5,4 L12.5,4 Z M12.5,0 C5.597,0 0,5.597 0,12.5 C0,19.403 5.597,25 12.5,25 C19.403,25 25,19.403 25,12.5 C25,5.597 19.403,0 12.5,0 Z" id="Shape" fill-rule="nonzero"></path>
+                        <circle id="Oval" fill-rule="nonzero" cx="12.5" cy="12.5" r="4.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
