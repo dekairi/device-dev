@@ -44,14 +44,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
     for (let i = 0; i < radios.length; i++) {
         radios[i].addEventListener("keydown", function (evt) {
-            if (evt.key === "ArrowDown" || evt.key === "ArrowRight") {
+            if (evt.key === "ArrowDown") {
                 evt.preventDefault();
                 if (i !== radios.length - 1) {
                     changeCurrentRadioButton(radios[i], radios[i].querySelector("input"));
                     setFocusOnNextOrPreviousItem(radios[i + 1], radios[i + 1].querySelector("input"));
                 }
             }
-            if (evt.key === "ArrowUp" || evt.key === "ArrowLeft") {
+            if (evt.key === "ArrowUp") {
                 evt.preventDefault();
                 if (i !== 0) {
                     changeCurrentRadioButton(radios[i], radios[i].querySelector("input"));

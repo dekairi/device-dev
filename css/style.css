@@ -1900,50 +1900,64 @@ input[type="checkbox"]:checked:disabled ~ .checkbox--text {
     cursor: pointer;
 }
 
+.sort-low-high {
+    position: relative;
+}
+
 .sort-low-high a {
     line-height: 0;
     font-size: 0;
     color: transparent;
-    position: relative;
+    position: absolute;
+    height: 10px;
+    width: 11px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.sort-low-high .radio:first-child::before {
+.sort-low-high a:first-child {
+    right: -235px;
+    top: 8px;
+}
+
+.sort-low-high a:last-child {
+    right: -265px;
+    top: 8px;
+}
+
+.sort-low-high a:first-child::before {
     content: "";
     width: 11px;
     height: 10px;
     position: absolute;
     background-image: url("../img/icons/arrow-up.svg");
     background-repeat: no-repeat;
-    right: -40px;
-    top: 30px;
+    right: 0;
+    top: 0;
 }
 
-.sort-low-high .radio:last-child::after {
+.sort-low-high a:last-child::before {
     content: "";
     width: 11px;
     height: 10px;
     position: absolute;
     background-image: url("../img/icons/arrow-down.svg");
     background-repeat: no-repeat;
-    right: -70px;
-    top: 30px;
+    right: 0;
+    top: 0;
 }
 
 .sort-low-high--current {
     opacity: 0.2;
 }
 
-.sort-list .sort--current {
-    color: rgba(0, 0, 0, 1);
+.sort-low-high a:hover:not(.sort--current)::before,
+.sort-low-high a:focus:not(.sort--current)::before {
+    opacity: 0.4;
 }
 
-.sort-list a:hover:not(.sort--current),
-.sort-list a:focus:not(.sort--current) {
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.sort-list a:active:not(.sort--current) {
-    color: rgba(0, 0, 0, 1);
+.sort-list a:active:not(.sort--current)::before {
+    opacity: 1;
 }
 
 fieldset.bluetooth {
@@ -2026,7 +2040,7 @@ input[type="radio"]:checked:disabled ~ .radio--text {
 
 .catalog-list {
     margin: 0;
-    padding: 50px 0 0 80px;
+    padding: 70px 0 0 80px;
     display: flex;
     flex-wrap: wrap;
 }
