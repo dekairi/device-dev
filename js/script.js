@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', function () {
-    let btnWriteUs = document.getElementById('write-us-btn');
-    let elFeedback = document.getElementById('feedback');
+window.addEventListener("DOMContentLoaded", function () {
+    let btnWriteUs = document.getElementById("write-us-btn");
+    let elFeedback = document.getElementById("feedback");
     let elForm = elFeedback.querySelector(".feedback-form");
     let btnCloseFeedback = document.getElementById("btn-close-feedback");
 
@@ -11,9 +11,9 @@ window.addEventListener('DOMContentLoaded', function () {
     let isStorageSupport = true;
     let storage = {};
 
-    let map = document.querySelector('#small-map');
-    let elMap = document.querySelector('#big-map');
-    let btnCloseMap = document.querySelector('#btn-close-map');
+    let map = document.querySelector("#small-map");
+    let elMap = document.querySelector("#big-map");
+    let btnCloseMap = document.querySelector("#btn-close-map");
 
     try {
         storage["name"] = localStorage.getItem("name");
@@ -22,9 +22,9 @@ window.addEventListener('DOMContentLoaded', function () {
         isStorageSupport = false;
     }
 
-    btnWriteUs.addEventListener('click', function (evt) {
+    btnWriteUs.addEventListener("click", function (evt) {
         evt.preventDefault();
-        elFeedback.classList.add('modal--show');
+        elFeedback.classList.add("modal--show");
         emptyFields();
         if (storage) {
             elName.value = storage["name"];
@@ -35,12 +35,12 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    btnCloseFeedback.addEventListener('click', function (evt) {
+    btnCloseFeedback.addEventListener("click", function (evt) {
         evt.preventDefault();
-        elFeedback.classList.remove('modal--show');
+        elFeedback.classList.remove("modal--show");
     });
 
-    document.addEventListener('keydown', function (evt) {
+    document.addEventListener("keydown", function (evt) {
         if (evt.key === "Escape") {
             if (elFeedback.classList.contains("modal--show")) {
                 elFeedback.classList.remove("modal--show");
@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 elMessage.classList.remove("textarea--error");
             }
 
-            elMap.classList.remove('modal--show');
+            elMap.classList.remove("modal--show");
         }
     });
 
@@ -87,14 +87,14 @@ window.addEventListener('DOMContentLoaded', function () {
     };
 
     //map
-    map.addEventListener('click', function (evt) {
+    map.addEventListener("click", function (evt) {
         evt.preventDefault();
-        elMap.classList.add('modal--show');
+        elMap.classList.add("modal--show");
     });
 
-    btnCloseMap.addEventListener('click', function (evt) {
+    btnCloseMap.addEventListener("click", function (evt) {
         evt.preventDefault();
-        elMap.classList.remove('modal--show');
+        elMap.classList.remove("modal--show");
     });
 
     ymaps.ready(init);
