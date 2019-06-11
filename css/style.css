@@ -69,13 +69,26 @@ a {
     text-decoration: none;
 }
 
-.visually--hidden {
+.visually--hidden:not(:focus):not(:active),
+input[type="checkbox"].visually--hidden,
+input[type="radio"].visually--hidden {
     position: absolute;
-    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    -webkit-clip-path: inset(100%);
+
+    clip-path: inset(100%);
     clip: rect(0 0 0 0);
-    height: 1px; width: 1px;
-    margin: -1px; padding: 0; border: 0;
+    overflow: hidden;
 }
+
 
 .main-header {
     color: #000000;
@@ -1796,15 +1809,15 @@ fieldset.color {
 
     width: 23px;
     height: 23px;
-    opacity: 0.8;
+    opacity: 1;
 
     background-image: url("../img/icons/checkbox-off.svg");
     background-repeat: no-repeat;
 }
 
-.checkbox input[type="checkbox"]:hover + .checkbox-indicator,
-.checkbox input[type="checkbox"]:focus + .checkbox-indicator {
-    opacity: 1;
+.checkbox input[type="checkbox"] + .checkbox-indicator:hover,
+.checkbox input[type="checkbox"] + .checkbox-indicator:focus {
+    opacity: 0.6;
 }
 
 .checkbox input[type="checkbox"]:checked + .checkbox-indicator {
@@ -1813,11 +1826,17 @@ fieldset.color {
 }
 
 input[type="checkbox"]:disabled + .checkbox-indicator,
-input[type="checkbox"]:disabled:hover + .checkbox-indicator,
-input[type="checkbox"]:disabled:focus + .checkbox-indicator,
-input[type="checkbox"]:disabled:active + .checkbox-indicator,
-input[type="checkbox"]:checked:disabled + .checkbox-indicator {
-    opacity: 0.4;
+input[type="checkbox"]:disabled + .checkbox-indicator:hover,
+input[type="checkbox"]:disabled + .checkbox-indicator:focus,
+input[type="checkbox"]:disabled + .checkbox-indicator:active,
+input[type="checkbox"]:checked:disabled + .checkbox-indicator,
+
+input[type="checkbox"]:disabled ~ .checkbox--text,
+input[type="checkbox"]:disabled ~ .checkbox--text:hover,
+input[type="checkbox"]:disabled ~ .checkbox--text:focus,
+input[type="checkbox"]:disabled ~ .checkbox--text:active,
+input[type="checkbox"]:checked:disabled ~ .checkbox--text {
+    opacity: 0.25;
     cursor: none;
 }
 
@@ -1881,15 +1900,14 @@ input[type="checkbox"]:checked:disabled + .checkbox-indicator {
     cursor: pointer;
 }
 
-.sort-list .sort-low-high,
-.sort-list .sort-low-high {
+.sort-low-high a {
     line-height: 0;
     font-size: 0;
     color: transparent;
     position: relative;
 }
 
-.sort-list li:nth-child(4)::before {
+.sort-low-high .radio:first-child::before {
     content: "";
     width: 11px;
     height: 10px;
@@ -1900,7 +1918,7 @@ input[type="checkbox"]:checked:disabled + .checkbox-indicator {
     top: 30px;
 }
 
-.sort-list li:last-child::before {
+.sort-low-high .radio:last-child::after {
     content: "";
     width: 11px;
     height: 10px;
@@ -1957,15 +1975,15 @@ fieldset.bluetooth {
 
     width: 25px;
     height: 25px;
-    opacity: 0.8;
+    opacity: 1;
 
     background-image: url("../img/icons/radio-off.svg");
     background-repeat: no-repeat;
 }
 
-.bluetooth-radio-buttons input[type="radio"]:hover + .radio-indicator,
-.bluetooth-radio-buttons input[type="radio"]:focus + .radio-indicator {
-    opacity: 1;
+.bluetooth-radio-buttons input[type="radio"] + .radio-indicator:hover,
+.bluetooth-radio-buttons input[type="radio"] + .radio-indicator:focus {
+    opacity: 0.6;
 }
 
 .bluetooth-radio-buttons input[type="radio"]:checked + .radio-indicator {
@@ -1973,11 +1991,17 @@ fieldset.bluetooth {
 }
 
 input[type="radio"]:disabled + .radio-indicator,
-input[type="radio"]:disabled:hover + .radio-indicator,
-input[type="radio"]:disabled:focus + .radio-indicator,
-input[type="radio"]:disabled:active + .radio-indicator,
-input[type="radio"]:checked:disabled + .radio-indicator {
-    opacity: 0.4;
+input[type="radio"]:disabled + .radio-indicator:hover,
+input[type="radio"]:disabled + .radio-indicator:focus,
+input[type="radio"]:disabled + .radio-indicator:active,
+input[type="radio"]:checked:disabled + .radio-indicator,
+
+input[type="radio"]:disabled ~ .radio--text,
+input[type="radio"]:disabled ~ .radio--text:hover,
+input[type="radio"]:disabled ~ .radio--text:focus,
+input[type="radio"]:disabled ~ .radio--text:active,
+input[type="radio"]:checked:disabled ~ .radio--text {
+    opacity: 0.25;
     cursor: default;
 }
 
@@ -2002,13 +2026,13 @@ input[type="radio"]:checked:disabled + .radio-indicator {
 
 .catalog-list {
     margin: 0;
-    padding: 70px 0 0 80px;
+    padding: 50px 0 0 80px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .catalog-item {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .catalog-list li:nth-child(2n + 1) {
@@ -2036,7 +2060,7 @@ input[type="radio"]:checked:disabled + .radio-indicator {
 }
 
 .catalog-item .catalog-item--image {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .catalog-item .catalog-item--wrap {
@@ -2083,7 +2107,7 @@ input[type="radio"]:checked:disabled + .radio-indicator {
     background-color: rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: space-between;
-    margin: -5px 10px 80px 80px;
+    margin: -10px 10px 80px 80px;
     padding: 0;
 }
 
@@ -2139,7 +2163,7 @@ a.btn-back,
 a.btn-next {
     color: rgba(0, 0, 0, 1);
     letter-spacing: 3.2px;
-    padding: 20px 25px;
+    padding: 22px 28px;
 }
 
 a.btn-back:hover,

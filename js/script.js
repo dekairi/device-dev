@@ -162,6 +162,10 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    btnSearch.addEventListener("focusout", function () {
+        btnSearch.style.visibility = "hidden";
+    });
+
     //slide-show information
     let lisInfo = document.querySelectorAll(".info-menu-item");
     let btnsInfo = document.querySelectorAll(".info-menu-item .btn");
