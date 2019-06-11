@@ -2047,6 +2047,7 @@ input[type="radio"]:checked:disabled ~ .radio--text {
 
 .catalog-item {
     margin-bottom: 45px;
+    position: relative;
 }
 
 .catalog-list li:nth-child(2n + 1) {
@@ -2077,13 +2078,62 @@ input[type="radio"]:checked:disabled ~ .radio--text {
     margin-bottom: 25px;
 }
 
+.catalog-item .hover--item {
+    display: none;
+}
+
+.catalog-item:hover .hover--item,
+.catalog-item:focus .hover--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 180px;
+    left: 80px;
+    z-index: 1;
+}
+
+.catalog-item .add-compare-link {
+    font-weight: 300;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.13px;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.catalog-item .add-compare-link:hover,
+.catalog-item .add-compare-link:focus {
+    color: rgba(0, 0, 0, 1);
+}
+
+.catalog-item .add-compare-link:active {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item .btn {
+    min-width: 200px;
+    text-align: center;
+}
+
+.catalog-item .btn:hover,
+.catalog-item .btn:focus {
+    background-color: rgba(240, 197, 46, 1);
+}
+
+.catalog-item .btn:active {
+    background-color: rgba(240, 197, 46, 1);
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .catalog-item .catalog-item--wrap {
     display: flex;
     justify-content: space-between;
 }
 
-.catalog-item img:hover,
-.catalog-item img:focus {
+.catalog-item:hover .catalog--image,
+.catalog-item:focus .catalog--image {
     opacity: 0.7;
 }
 
