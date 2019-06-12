@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <title>Каталог товаров</title>
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
@@ -14,8 +14,10 @@
                 </a>
                 <div class="user-nav user-nav--logout">
                     <div class="search--wrap">
-                        <input class="search" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-                        <button class="search-btn" type="submit" tabindex="-1">Найти</button>
+                        <form action="http://echo.htmlacademy.ru" method="get">
+                            <input class="search" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту" value="">
+                            <button class="search-btn" type="submit" tabindex="-1">Найти</button>
+                        </form>
                     </div>
                     <div class="user-name--wrap">
                         <a class="user-name user-nav-link" href="#">Валентин Петухов</a>
@@ -137,20 +139,22 @@
                         <section class="catalog">
                             <h2 class="visually--hidden">Каталог товаров</h2>
 
-                            <fieldset class="sort">
-                                <legend>Сортировка:</legend>
+                            <div class="sort">
+                                <span>Сортировка:</span>
 
                                 <ul class="sort-list">
                                     <li><a href="#" class="sort--current">По цене</a></li>
                                     <li><a href="#">По типу</a></li>
-                                    <li><a href="#">По популярности</a></li>
+                                    <li class="sort-item--last"><a href="#">По популярности</a></li>
 
-                                    <li class="sort-low-high">
+                                    <li class="sort-low-high sort-from-low">
                                         <a class="sort-low-high--current sort--current" href="#">По возрастанию</a>
+                                    </li>
+                                    <li class="sort-low-high sort-from-high">
                                         <a href="#">По убыванию</a>
                                     </li>
                                 </ul>
-                            </fieldset>
+                            </div>
 
                             <ul class="catalog-list">
                                 <li class="catalog-item">
@@ -217,13 +221,9 @@
 
                             <ul class="pagination-list">
                                 <li class="pagination-item"><a class="button btn-back" href="#">Назад</a></li>
-                                <li>
-                                    <ul class="pagination-numbers-list">
-                                        <li class="pagination-item"><a class="pagination-number pagination-item--current">1</a></li>
-                                        <li class="pagination-item"><a class="pagination-number" href="#">2</a></li>
-                                        <li class="pagination-item"><a class="pagination-number" href="#">3</a></li>
-                                    </ul>
-                                </li>
+                                <li class="pagination-item pagination-item--first-page"><a class="pagination-number pagination-item--current">1</a></li>
+                                <li class="pagination-item"><a class="pagination-number" href="#">2</a></li>
+                                <li class="pagination-item pagination-item--last-page"><a class="pagination-number" href="#">3</a></li>
                                 <li class="pagination-item"><a class="button btn-next" href="#">Вперед</a></li>
                             </ul>
                         </section>
@@ -239,61 +239,57 @@
                         <img src="img/icons/logo-yellow.svg" alt="Логотип Device" width="164" height="36">
                     </a>
                     <ul class="footer-user-nav footer-user-nav--logout">
-                        <li>
-                            <div class="footer-user-nav-item footer-login--wrap">
-                                <svg width="13px" height="12px" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g transform="translate(-975.000000, -5572.000000)" fill="#FFC600">
-                                            <g transform="translate(866.000000, 5559.000000)">
-                                                <g transform="translate(109.000000, 13.000000)">
-                                                    <g>
-                                                        <path d="M0.032,12 L12.969,12 C12.806,9.357 10.895,7.163 8.298,6.457 C9.34299648,5.83110167 9.98328642,4.70309829 9.985,3.485 C9.985,1.56028765 8.42471235,-3.86912724e-16 6.5,-3.86912724e-16 C4.57528765,-3.86912724e-16 3.015,1.56028765 3.015,3.485 C3.015,4.749 3.695,5.846 4.703,6.457 C2.106,7.163 0.194,9.357 0.032,12 Z" fill-rule="nonzero"></path>
-                                                    </g>
+                        <li class="footer-user-nav-item footer-login--wrap">
+                            <svg width="13px" height="12px" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-975.000000, -5572.000000)" fill="#FFC600">
+                                        <g transform="translate(866.000000, 5559.000000)">
+                                            <g transform="translate(109.000000, 13.000000)">
+                                                <g>
+                                                    <path d="M0.032,12 L12.969,12 C12.806,9.357 10.895,7.163 8.298,6.457 C9.34299648,5.83110167 9.98328642,4.70309829 9.985,3.485 C9.985,1.56028765 8.42471235,-3.86912724e-16 6.5,-3.86912724e-16 C4.57528765,-3.86912724e-16 3.015,1.56028765 3.015,3.485 C3.015,4.749 3.695,5.846 4.703,6.457 C2.106,7.163 0.194,9.357 0.032,12 Z" fill-rule="nonzero"></path>
                                                 </g>
                                             </g>
                                         </g>
                                     </g>
-                                </svg>
-                                <a class="footer-user-name" href="#">Валентин Петухов</a>
-                            </div>
+                                </g>
+                            </svg>
+                            <a class="footer-user-name" href="#">Валентин Петухов</a>
+                        </li>
+                        <li class="footer-user-nav-item footer-user-nav--logout-btn">
                             <a class="footer-login-link footer-user-nav-link--logout" href="#">Выйти</a>
                         </li>
-                        <li>
-                            <div class="footer-user-nav-item footer-compare--wrap">
-                                <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g transform="translate(-1088.000000, -5574.000000)" fill="#FFC600">
-                                            <g transform="translate(866.000000, 5559.000000)">
-                                                <g transform="translate(222.000000, 15.000000)">
-                                                    <g>
-                                                        <path d="M8,2 L9.984,2 L9.984,10 L8,10 L8,2 Z M0,3 L1.984,3 L1.984,10 L0,10 L0,3 Z M4,0 L6,0 L6,10 L4,10 L4,0 Z" fill-rule="nonzero"></path>
-                                                    </g>
+                        <li class="footer-user-nav-item footer-compare--wrap">
+                            <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-1088.000000, -5574.000000)" fill="#FFC600">
+                                        <g transform="translate(866.000000, 5559.000000)">
+                                            <g transform="translate(222.000000, 15.000000)">
+                                                <g>
+                                                    <path d="M8,2 L9.984,2 L9.984,10 L8,10 L8,2 Z M0,3 L1.984,3 L1.984,10 L0,10 L0,3 Z M4,0 L6,0 L6,10 L4,10 L4,0 Z" fill-rule="nonzero"></path>
                                                 </g>
                                             </g>
                                         </g>
                                     </g>
-                                </svg>
-                                <a class="compare-link footer-user-nav-link" href="#">Сравнить</a>
-                            </div>
+                                </g>
+                            </svg>
+                            <a class="compare-link footer-user-nav-link" href="#">Сравнить</a>
                         </li>
-                        <li>
-                            <div class="footer-user-nav-item footer-cart--wrap">
-                                <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g transform="translate(-1218.000000, -5572.000000)" fill="#FFC600">
-                                            <g transform="translate(866.000000, 5559.000000)">
-                                                <g transform="translate(352.000000, 13.000000)">
-                                                    <g>
-                                                        <path d="M11.864,3.017 C11.783,2.92001266 11.663361,2.86366889 11.537,2.863 L9.225,2.863 L9.225,4.09 C9.225,4.653 8.741,5.112 8.145,5.112 C7.551,5.112 7.067,4.654 7.067,4.09 L7.067,2.863 L4.909,2.863 L4.909,4.09 C4.909,4.653 4.424,5.112 3.829,5.112 C3.234,5.112 2.751,4.654 2.751,4.09 L2.751,2.863 L0.438,2.863 C0.311669929,2.86380516 0.192085359,2.92012328 0.111,3.017 C0.0272492552,3.11637604 -0.0118211461,3.24588719 0.003,3.375 L0.779,10.509 C0.794,11.315 1.421,11.964 2.19,11.964 L9.785,11.964 C10.555,11.964 11.181,11.315 11.196,10.509 L11.972,3.375 C11.9863427,3.24593049 11.9473281,3.11660458 11.864,3.017 Z" fill-rule="nonzero"></path>
-                                                        <path d="M3.829,4.499 C4.068,4.499 4.262,4.315 4.262,4.09 L4.262,1.84 C4.262,1.208 4.934,0.818 5.557,0.818 L6.636,0.818 C7.291,0.818 7.714,1.219 7.714,1.84 L7.714,4.09 C7.714,4.315 7.908,4.499 8.145,4.499 C8.384,4.499 8.578,4.315 8.578,4.09 L8.578,1.84 C8.577,0.773 7.761,0 6.636,0 L5.557,0 C4.367,0 3.398,0.826 3.398,1.84 L3.398,4.09 C3.398,4.315 3.592,4.499 3.829,4.499 Z" fill-rule="nonzero"></path>
-                                                    </g>
+                        <li class="footer-user-nav-item footer-cart--wrap">
+                            <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-1218.000000, -5572.000000)" fill="#FFC600">
+                                        <g transform="translate(866.000000, 5559.000000)">
+                                            <g transform="translate(352.000000, 13.000000)">
+                                                <g>
+                                                    <path d="M11.864,3.017 C11.783,2.92001266 11.663361,2.86366889 11.537,2.863 L9.225,2.863 L9.225,4.09 C9.225,4.653 8.741,5.112 8.145,5.112 C7.551,5.112 7.067,4.654 7.067,4.09 L7.067,2.863 L4.909,2.863 L4.909,4.09 C4.909,4.653 4.424,5.112 3.829,5.112 C3.234,5.112 2.751,4.654 2.751,4.09 L2.751,2.863 L0.438,2.863 C0.311669929,2.86380516 0.192085359,2.92012328 0.111,3.017 C0.0272492552,3.11637604 -0.0118211461,3.24588719 0.003,3.375 L0.779,10.509 C0.794,11.315 1.421,11.964 2.19,11.964 L9.785,11.964 C10.555,11.964 11.181,11.315 11.196,10.509 L11.972,3.375 C11.9863427,3.24593049 11.9473281,3.11660458 11.864,3.017 Z" fill-rule="nonzero"></path>
+                                                    <path d="M3.829,4.499 C4.068,4.499 4.262,4.315 4.262,4.09 L4.262,1.84 C4.262,1.208 4.934,0.818 5.557,0.818 L6.636,0.818 C7.291,0.818 7.714,1.219 7.714,1.84 L7.714,4.09 C7.714,4.315 7.908,4.499 8.145,4.499 C8.384,4.499 8.578,4.315 8.578,4.09 L8.578,1.84 C8.577,0.773 7.761,0 6.636,0 L5.557,0 C4.367,0 3.398,0.826 3.398,1.84 L3.398,4.09 C3.398,4.315 3.592,4.499 3.829,4.499 Z" fill-rule="nonzero"></path>
                                                 </g>
                                             </g>
                                         </g>
                                     </g>
-                                </svg>
-                                <a class="cart-link footer-user-nav-link" href="#">Корзина</a>
-                            </div>
+                                </g>
+                            </svg>
+                            <a class="cart-link footer-user-nav-link" href="#">Корзина</a>
                         </li>
                     </ul>
                 </div>

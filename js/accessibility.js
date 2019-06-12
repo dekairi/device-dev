@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener("DOMContentLoaded", function () {
     //search focus
     let inputSearch = document.querySelector(".search");
     let btnSearch = document.querySelector(".search-btn");

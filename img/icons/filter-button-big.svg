@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 20 23">
+    <path fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" opacity=".3"/>
+    <circle cx="10" cy="10" r="10" fill="#FFF"/>
+    <circle cx="10" cy="10" r="2" fill="#ABABAB"/>
+</svg>
