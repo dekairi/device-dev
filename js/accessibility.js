@@ -25,6 +25,10 @@ window.addEventListener("DOMContentLoaded", function () {
                 changeCheckbox(chboxes[i], chboxes[i].querySelector("input"));
             }
         });
+
+        chboxes[i].addEventListener("click", function () {
+            changeCheckbox(chboxes[i], chboxes[i].querySelector("input"));
+        });
     }
 
     function changeCheckbox(checkbox, input) {
@@ -58,6 +62,17 @@ window.addEventListener("DOMContentLoaded", function () {
                     setFocusOnNextOrPreviousItem(radios[i - 1], radios[i - 1].querySelector("input"));
                 }
             }
+        });
+
+        radios[i].addEventListener("click", function () {
+            for (let j = 0; j < radios.length; j++) {
+                radios[j].setAttribute("tabindex", "-1");
+                radios[j].setAttribute("aria-checked", "false");
+                radios[j].querySelector("input").removeAttribute("checked");
+            }
+            radios[i].setAttribute("tabindex", "0");
+            radios[i].setAttribute("aria-checked", "true");
+            radios[i].querySelector("input").setAttribute("checked", "checked");
         });
     }
 

@@ -1852,7 +1852,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .filter-width--wrap {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 330px;
+    width: 340px;
     margin-left: auto;
 }
 
@@ -1870,7 +1870,7 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-left: 60px;
+    margin-left: 75px;
     position: relative;
 }
 
@@ -1968,10 +1968,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .filter-price::after {
     position: absolute;
     content: "";
-    width: 90px;
+    width: 100px;
     height: 2px;
     top: 18px;
-    left: 20px;
+    left: 15px;
     background-color: rgba(145, 201, 47, 1);
     z-index: -1;
 }
@@ -1998,11 +1998,11 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .filter-price button:first-of-type {
-    left: 0;
+    left: -5px;
 }
 
 .filter-price button:last-of-type {
-    left: 110px;
+    left: 105px;
 }
 
 .color > div,
@@ -2249,8 +2249,8 @@ fieldset.bluetooth {
 
 .bluetooth-radio-buttons input[type="radio"] + .radio-indicator {
     position: absolute;
-    top: 5px;
-    left: -35px;
+    top: 10px;
+    left: -40px;
 
     width: 25px;
     height: 25px;
