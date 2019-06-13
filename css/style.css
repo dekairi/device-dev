@@ -572,7 +572,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .slide-1::after {
-    right: 60px;
+    right: 50px;
 }
 
 .slide .image--wrap {
@@ -1239,7 +1239,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .footer-user-nav--wrap {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     text-align: right;
     position: relative;
     -webkit-box-pack: end;
@@ -1336,7 +1336,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .footer-menu-list li:not(:last-child) {
-    margin-right: 35px;
+    margin-right: 33px;
 }
 
 .footer-menu-list a {
@@ -1368,7 +1368,7 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin: 0 40px 0 0;
+    margin: 0 55px 0 0;
     padding: 0;
 }
 
@@ -1388,14 +1388,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .footer-social-list {
     list-style: none;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 0 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 145px;
+    width: 165px;
 }
 
 .footer-social-list li {
@@ -1817,7 +1817,6 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    margin-right: -15px;
 }
 
 .filter-column--wrap::before {
@@ -1835,7 +1834,6 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    margin-left: 15px;
 }
 
 .catalog-column--wrap::before {
@@ -1852,14 +1850,12 @@ input[type="search"]::-webkit-search-results-decoration {
 .filter-width--wrap {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 340px;
+    width: 345px;
     margin-left: auto;
 }
 
 .catalog-width--wrap {
-    width: 850px;
-    margin-right: -10px;
-    margin-left: 10px;
+    width: 840px;
 }
 
 .filter {
@@ -1880,7 +1876,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .filter form {
-    padding: 75px 65px 0 0;
+    padding: 75px 70px 0 0;
 }
 
 .filter-title--wrap {
@@ -1913,7 +1909,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .filter fieldset.price {
     border-top: 2px solid rgba(0, 0, 0, 1);
     border-bottom: 2px solid rgba(0, 0, 0, 1);
-    margin-bottom: 15px;
+    margin: 0 7px 15px -2px;
 }
 
 .price {
@@ -2026,7 +2022,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 fieldset.color {
-    margin: -5px 0 15px 15px;
+    margin: -5px 0 0 10px;
     padding: 0;
 }
 
@@ -2037,6 +2033,7 @@ fieldset.color {
 .color .checkbox {
     position: relative;
     cursor: pointer;
+    height: 41px;
 }
 
 .checkbox input[type="checkbox"] + .checkbox-indicator {
@@ -2144,12 +2141,8 @@ fieldset.color {
     color: rgba(0, 0, 0, 1);
 }
 
-.sort-list li:first-child {
+.sort-list li {
     margin-right: 30px;
-}
-
-.sort-list li:not(:first-child) {
-    margin-right: 35px;
 }
 
 .sort-list li.sort-item--last {
@@ -2177,12 +2170,12 @@ fieldset.color {
 }
 
 .sort-from-low a {
-    right: -235px;
+    right: -240px;
     top: 8px;
 }
 
 .sort-from-high a {
-    right: -265px;
+    right: -270px;
     top: 8px;
 }
 
@@ -2228,7 +2221,7 @@ fieldset.color {
 fieldset.bluetooth {
     border-top: 2px solid rgba(0, 0, 0, 1);
     position: relative;
-    margin: 40px 0 25px 0;
+    margin: 30px 0 25px -2px;
     width: 200px;
 }
 
@@ -2290,6 +2283,7 @@ fieldset.bluetooth {
 
 .filter-width--wrap .btn {
     min-width: 200px;
+    margin-left: -2px;
 }
 
 .filter-width--wrap .btn:hover,
@@ -2313,8 +2307,8 @@ fieldset.bluetooth {
 }
 
 .catalog-list {
-    margin: 0 0 0 -10px;
-    padding: 70px 0 0 80px;
+    margin: 0;
+    padding: 73px 0 0 68px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2323,12 +2317,12 @@ fieldset.bluetooth {
 }
 
 .catalog-item {
-    margin-bottom: 45px;
+    margin-bottom: 43px;
     position: relative;
 }
 
 .catalog-list li:nth-child(2n + 1) {
-    margin-right: 40px;
+    margin-right: 38px;
 }
 
 .catalog-item a {
@@ -2352,7 +2346,7 @@ fieldset.bluetooth {
 }
 
 .catalog-item .catalog-item--image {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 }
 
 .catalog-item .hover--item {
@@ -2463,7 +2457,7 @@ fieldset.bluetooth {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin: -10px 10px 80px 80px;
+    margin: -10px 10px 80px 70px;
     padding: 0;
 }
 
