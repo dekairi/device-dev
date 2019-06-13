@@ -15,6 +15,24 @@ window.addEventListener("DOMContentLoaded", function () {
         btnSearch.style.visibility = "hidden";
     });
 
+    //menu focus
+    let btnCatalogMenu = document.querySelector(".catalog-btn");
+    let elSubCatalog = document.querySelector(".catalog-submenu");
+    btnCatalogMenu.addEventListener("keydown", function (evt) {
+        if (evt.key === "Enter") {
+            evt.preventDefault();
+            elSubCatalog.classList.add("subcatalog--show");
+        }
+    });
+
+    let elDeliveryBtn = document.querySelector(".menu-item:nth-child(2) a");
+    btnCatalogMenu.addEventListener("focus", function () {
+        elSubCatalog.classList.remove("subcatalog--show");
+    });
+    elDeliveryBtn.addEventListener("focus", function () {
+        elSubCatalog.classList.remove("subcatalog--show");
+    });
+
     //checkboxes and radio
     let chboxes = document.querySelectorAll(".checkbox");
 
