@@ -751,6 +751,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .slider-dots-list button:not(.slider-dot-item--current):hover {
     cursor: pointer;
+    opacity: 0.6;
 }
 
 .slider-dots-list li:not(:last-child) {
